@@ -1,0 +1,56 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[character]
+success_symbol = '[➜](bold blue)'
+error_symbol = '[➜](bold red)'
+vimcmd_symbol = '[❮](bold green)'
+vimcmd_replace_one_symbol = '[❮](bold purple)'
+vimcmd_replace_symbol = '[❮](bold purple)'
+vimcmd_visual_symbol ='[❮](bold yellow)'
+
+[directory]
+format = "[$path](bold blue)[$read_only](red) "
+truncation_length = 3
+truncation_symbol = ''
+truncate_to_repo = true
+
+[git_branch]
+style = 'bold 208' # Orange
+
+[git_status]
+style = '172'
+up_to_date = '✓'
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style)'
+show_always = true
+disabled = true
+
+[hostname]
+format = '[$ssh_symbol](bold blue) on [$hostname](bold red) in '
+trim_at = '.'
+ssh_only = false
+disabled = true
+
+[package]
+display_private = true
+
+[docker_context]
+style = "bold 039" # Blue
+
+[terraform]
+format = 'via [$symbol]($style) [$workspace]($style) ' # No Terraform Version because this takes too long
+symbol = "🆃 "
+style = "bold 105"
+
+[rust]
+style = "bold 216"
+
+[golang]
+symbol = "🏎  "
