@@ -19,12 +19,15 @@ rsync \
     --exclude "macos" \
     --exclude "nodejs" \
     --exclude "rust" \
-    --exclude "scripts" \
     --exclude "vscode" \
     --exclude "install.sh" \
     --exclude "README.md" \
     -vrh \
     . ~;
+
+rsync \
+    -vrh \
+    ./bin/ ~/.bin;
 
 # Apply Home Config
 echo "Source .zshrc to apply latest changes..."
