@@ -5,7 +5,7 @@ echo "Setting up..."
 # Run install scripts
 echo "Running installation scripts..."
 (cd ./homebrew ; ./install.sh) # otherwise the formulae and cask scripts are not found 
-# ./macos/install.sh
+./macos/install.sh
 ./nodejs/install.sh
 ./rust/install.sh
 ./vscode/install.sh
