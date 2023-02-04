@@ -8,7 +8,7 @@ echo "Running installation scripts..."
 ./macos/install.sh
 ./nodejs/install.sh
 ./rust/install.sh
-./vscode/install.sh
+(cd ./vscode ; ./install.sh)
 
 # Copy to Home
 echo "Copying data to Home directory..."

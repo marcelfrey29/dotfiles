@@ -1,0 +1,217 @@
+{
+    // Telemetry
+    "telemetry.telemetryLevel": "off",
+    "redhat.telemetry.enabled": false,
+    "workbench.enableExperiments": false,
+    // Window
+    "window.commandCenter": true,
+    // Workbench
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 24,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.hover.delay": 250,
+    "workbench.list.smoothScrolling": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "workbench.editor.openPositioning": "last",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 8,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.colorCustomizations": {
+        "[GitHub Dark Dimmed]": {
+            // Disable focus borders
+            "focusBorder": "#00000000",
+            // Disable Borders
+            "titleBar.border": "#00000000",
+            "activityBar.border": "#00000000",
+            "editorWidget.border": "#00000000",
+            // Activity Bar
+            "activityBarBadge.background": "#f69d50",
+            "activityBarBadge.foreground": "#000000",
+            // Scrollbar
+            "scrollbarSlider.background": "#ADBAC725",
+            // Editor
+            "editorCursor.foreground": "#6cb6ff",
+            "editorLineNumber.activeForeground": "#6cb6ff",
+            "editor.foldBackground": "#10151C",
+            "editor.lineHighlightBackground": "#30353C",
+            // Editor Gutter
+            "editorGutter.addedBackground": "#6BC46DBF",
+            "editorGutter.modifiedBackground": "#6cb6ff",
+            "editorGutter.deletedBackground": "#F47067",
+            // Panel
+            "badge.background": "#f69d50",
+            "badge.foreground": "#000000",
+            // Git
+            "gitDecoration.modifiedResourceForeground": "#6cb6ff",
+            // Icons
+            "icon.foreground": "#ADBAC7",
+            "symbolIcon.keywordForeground": "#F47067",
+            "symbolIcon.methodForeground": "#6CB6FF",
+            "symbolIcon.functionForeground": "#6CB6FF",
+            "symbolIcon.constructorForeground": "#6CB6FF",
+            "symbolIcon.enumeratorMemberForeground": "#6CB6FF",
+            "symbolIcon.classForeground": "#F69D50",
+            "symbolIcon.interfaceForeground": "#F69D50",
+            "symbolIcon.structForeground": "#F69D50",
+            "symbolIcon.moduleForeground": "#F69D50",
+            "symbolIcon.namespaceForeground": "#F69D50",
+            "symbolIcon.packageForeground": "#F69D50",
+            "symbolIcon.objectForeground": "#F69D50",
+            "symbolIcon.arrayForeground": "#F69D50",
+            "symbolIcon.propertyForeground": "#ADBAC7",
+            "symbolIcon.fieldForeground": "#ADBAC7",
+            "symbolIcon.referenceForeground": "#daaa3f",
+            "symbolIcon.variableForeground": "#daaa3f",
+            "symbolIcon.numberForeground": "#dcbdfb",
+            "symbolIcon.stringForeground": "#6bc46d",
+            "symbolIcon.textForeground": "#6bc46d",
+            // UI
+            "button.background": "#6CB6FF",
+            "button.hoverBackground": "#4C96FF"
+        }
+    },
+    // Outline
+    "outline.showVariables": false,
+    "outline.showProperties": true,
+    "[typescript]": {
+        "outline.showVariables": false,
+        "outline.showProperties": true
+    },
+    "[terraform]": {
+        "outline.showArrays": false,
+        "outline.showBooleans": false,
+        "outline.showNumbers": false,
+        "outline.showStrings": false,
+        "outline.showVariables": false,
+        "outline.showConstants": false
+    },
+    // Files
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    // Zen Mode
+    "zenMode.hideLineNumbers": false,
+    // Sidebar / Explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
+    // Search
+    "search.showLineNumbers": true,
+    // Breadcrumbs
+    "breadcrumbs.enabled": false,
+    // Git
+    "scm.alwaysShowActions": true,
+    "scm.diffDecorationsGutterWidth": 4,
+    "scm.inputFontFamily": "editor",
+    "scm.inputFontSize": 14,
+    "scm.defaultViewMode": "tree",
+    "git.confirmSync": false,
+    "diffEditor.codeLens": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    // Editor
+    "editor.tabSize": 4,
+    "editor.tabCompletion": "on",
+    "editor.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Menlo, Consolas",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.codeLens": true,
+    "editor.codeLensFontSize": 12,
+    "editor.inlayHints.enabled": "on",
+    "editor.lightbulb.enabled": true,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.hover.enabled": true,
+    "editor.hover.delay": 250,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.showFoldingControls": "always",
+    "editor.linkedEditing": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderLineHighlight": "all",
+    "editor.smoothScrolling": true,
+    "editor.parameterHints.enabled": true,
+    "editor.parameterHints.cycle": true,
+    "editor.rename.enablePreview": false,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.verticalScrollbarSize": 12,
+    "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.scale": 2,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.maxColumn": 60,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.tokenColorCustomizations": {
+        "[GitHub Dark Dimmed]": {
+            // "comments": "",
+            // "keywords": "",
+            "functions": "#6cb6ff",
+            "strings": "#6bc46d",
+            "numbers": "#dcbdfb",
+            // "types": "",
+            "variables": "#daaa3f",
+            "textMateRules": [
+                {
+                    "name": "Lighgray (Default Text)",
+                    "scope": [
+                        "keyword.operator.assignment"
+                    ],
+                    "settings": {
+                        "foreground": "#ADBAC7"
+                    }
+                }
+            ]
+        }
+    },
+    "editor.accessibilitySupport": "off",
+    // Problems
+    "problems.showCurrentInStatus": true,
+    "problems.defaultViewMode": "table",
+    // Debugger
+    "debug.inlineValues": "on",
+    "debug.showInStatusBar": "always",
+    "debug.console.fontFamily": "'JetBrains Mono', 'Fira Code'",
+    "debug.showBreakpointsInOverviewRuler": true,
+    "debug.toolBarLocation": "docked",
+    // Terminal
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Menlo, Consolas",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.scrollback": 100000,
+    // Languages
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },
+    // Extensions
+    "extensions.ignoreRecommendations": true,
+    // Extensions | Terraform
+    "terraform.codelens.referenceCount": true,
+    "terraform.languageServer.enable": true,
+    // Extensions | TypeScript
+    "typescript.implementationsCodeLens.enabled": true,
+    // Extensions | Vim
+    // "vim.useCtrlKeys": false,
+    // Extensions | Vue / Volar
+    "volar.codeLens.scriptSetupTools": true,
+    "editor.stablePeek": true,
+    "editor.bracketPairColorization.enabled": false
+}

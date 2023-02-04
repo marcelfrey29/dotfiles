@@ -1,0 +1,650 @@
+[
+    // =========================
+    // General
+    // =========================
+    {
+        // Command Center
+        "key": "shift shift",
+        "command": "workbench.action.quickOpenWithModes"
+    },
+    {
+        // Escape to go back (but not from terminal because this breaks "vi")
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus || auxiliaryBarFocus || panelFocus && !terminalFocus"
+    },
+    {
+        // Escape to go back when in "vi" in integrated terminal
+        "key": "shift+escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "panelFocus && terminalFocus"
+    },
+    {
+        // Run a Run Configuration
+        "key": "ctrl ctrl",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        // Show Mouse Hover
+        "key": "alt+shift+[BracketLeft]",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        // Switch VS Code Windows
+        "key": "cmd+k cmd+w",
+        "command": "workbench.action.switchWindow"
+    },
+    // =========================
+    // Navigation Core
+    // =========================
+    {
+        // macOS: Toggle Left Sidebar
+        "key": "cmd+shift+1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac"
+    },
+    {
+        // Windows: Toggle Left Sidebar
+        "key": "alt+shift+1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac"
+    },
+    {
+        // macOS: Toggle Right Sidebar
+        "key": "shift+cmd+7",
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "isMac"
+    },
+    {
+        // Windows: Toggle Right Sidebar
+        "key": "shift+alt+7",
+        "command": "workbench.action.toggleAuxiliaryBar",
+        "when": "!isMac"
+    },
+    {
+        // macOS: Toggle Panel
+        "key": "shift+cmd+f12",
+        "command": "workbench.action.togglePanel",
+        "when": "isMac"
+    },
+    {
+        // Windows: Toggle Panel
+        "key": "shift+alt+f12",
+        "command": "workbench.action.togglePanel",
+        "when": "!isMac"
+    },
+    {
+        // Increase Panel Size
+        "key": "shift+alt+[Equal]",
+        "command": "workbench.action.increaseViewSize"
+    },
+    {
+        // Decrease Panel Size
+        "key": "shift+alt+[Minus]",
+        "command": "workbench.action.decreaseViewSize"
+    },
+    // =========================
+    // Navigation - Tool Windows
+    // =========================
+    {
+        // macOS: 1 - Focus Explorer
+        "key": "cmd+1",
+        "command": "workbench.explorer.fileView.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 1 - Focus Explorer
+        "key": "alt+1",
+        "command": "workbench.explorer.fileView.focus",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 0 - Focus SCM
+        "key": "cmd+0",
+        "command": "workbench.scm.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 0 - Focus SCM
+        "key": "alt+0",
+        "command": "workbench.scm.focus",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 7 - Focus Outline
+        "key": "cmd+7",
+        "command": "outline.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 7 - Focus Outline
+        "key": "alt+7",
+        "command": "outline.focus",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 6 - Focus Problem View
+        "key": "cmd+6",
+        "command": "workbench.actions.view.problems",
+        "when": "isMac"
+    },
+    {
+        // Windows: 6 - Focus Problem View
+        "key": "alt+6",
+        "command": "workbench.actions.view.problems",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 9 - Reference View
+        "key": "cmd+9",
+        "command": "references-view.tree.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 9 - Reference View
+        "key": "alt+9",
+        "command": "references-view.tree.focus",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 3 - Breakpoint (Run&Debug) View
+        "key": "cmd+3",
+        "command": "workbench.debug.action.focusBreakpointsView",
+        "when": "isMac"
+    },
+    {
+        // Windows: 3 - Breakpoint (Run&Debug) View
+        "key": "alt+3",
+        "command": "workbench.debug.action.focusBreakpointsView",
+        "when": "!isMac"
+    },
+    {
+        // Terminal
+        "key": "f12",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    // =========================
+    // Navigation - Vim in Lists 
+    // =========================
+    {
+        // Go to next folder (Child)
+        "key": "l",
+        "command": "nextCompressedFolder",
+        "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedLastFocus && !inputFocus"
+    },
+    {
+        // Expand Folder
+        "key": "l",
+        "command": "list.expand",
+        "when": "listFocus && treeElementCanExpand && !inputFocus || listFocus && treeElementHasChild && !inputFocus"
+    },
+    {
+        // Collapse folder
+        "key": "h",
+        "command": "list.collapse",
+        "when": "listFocus && treeElementCanCollapse && !inputFocus || listFocus && treeElementHasParent && !inputFocus"
+    },
+    {
+        // Go to previous folder (Parent)
+        "key": "h",
+        "command": "previousCompressedFolder",
+        "when": "explorerViewletCompressedFocus && explorerViewletVisible && filesExplorerFocus && !explorerViewletCompressedFirstFocus && !inputFocus"
+    },
+    {
+        // Down
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // Up
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    // =========================
+    // Navigation - Tabs
+    // =========================
+    {
+        // Next Tab
+        "key": "shift+alt+l",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        // Previous Tab
+        "key": "shift+alt+h",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        // macOS: Create Split
+        "key": "cmd+k cmd+r",
+        "command": "workbench.action.splitEditorRight",
+        "when": "isMac"
+    },
+    {
+        // Windows: Create Split
+        "key": "alt+k alt+r",
+        "command": "workbench.action.splitEditorRight",
+        "when": "!isMac"
+    },
+    {
+        // macOS: Next EditorGroup
+        "key": "cmd+k cmd+l",
+        "command": "workbench.action.focusNextGroup",
+        "when": "isMac && editorFocus"
+    },
+    {
+        // Windows: Next EditorGroup
+        "key": "alt+k alt+l",
+        "command": "workbench.action.focusNextGroup",
+        "when": "!isMac && editorFocus"
+    },
+    {
+        // macOS: Previous EditorGroup
+        "key": "cmd+k cmd+h",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "isMac && editorFocus"
+    },
+    {
+        // Windows: Previous EditorGroup
+        "key": "alt+k alt+h",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "!isMac&& editorFocus"
+    },
+    {
+        // macOS: Unsplit
+        "key": "cmd+k shift+cmd+s",
+        "command": "workbench.action.closeEditorsAndGroup",
+        "when": "isMac"
+    },
+    {
+        // Windows: Unsplit
+        "key": "alt+k shift+alt+s",
+        "command": "workbench.action.closeEditorsAndGroup",
+        "when": "!isMac"
+    },
+    // =========================
+    // Editing - General
+    // =========================
+    {
+        // Close Widget on "escape"
+        "key": "escape",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        // Close Widget on "escape"
+        "key": "escape",
+        "command": "closeParameterHints",
+        "when": "parameterHintsVisible"
+    },
+    {
+        // Quick-Fix
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    // =========================
+    // Editing - Code
+    // =========================
+    {
+        // Move line up
+        "key": "shift+alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        // Move line down
+        "key": "shift+alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        // Mac: Duplicate Line
+        "key": "cmd+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        // Windows: Duplicate Line
+        "key": "ctrl+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        // macOS: Line Comment
+        "key": "cmd+k cmd+c",
+        "command": "editor.action.commentLine",
+        "when": "isMac"
+    },
+    {
+        // Windows: Line Comment
+        "key": "alt+k alt+c",
+        "command": "editor.action.commentLine",
+        "when": "!isMac"
+    },
+    // =========================
+    // Refactoring
+    // =========================
+    {
+        // Refactor
+        "key": "alt+r",
+        "command": "editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        // Rename Symbol
+        "key": "shift+f6",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        // Rename File or Folder
+        "key": "shift+f6",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        // macOS: Show Parameter Hints
+        "key": "cmd+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        // Windows: Parameter Hints
+        "key": "ctrl+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        // Show References (in View)
+        "key": "alt+f7",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        // macOS: Go To Implementation
+        "key": "cmd+b",
+        "command": "editor.action.goToImplementation",
+        "when": "isMac && editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        // Windows: Go To Implementation
+        "key": "ctrl+b",
+        "command": "editor.action.goToImplementation",
+        "when": "!isMac&& editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        // macOS: Go To Reference
+        "key": "cmd+b",
+        "command": "editor.action.goToReferences",
+        "when": "isMac && editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        // Windows: Go To Reference
+        "key": "ctrl+b",
+        "command": "editor.action.goToReferences",
+        "when": "!isMac&& editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        // macOS: Go To Definition
+        "key": "cmd+b",
+        "command": "editor.action.revealDefinition",
+        "when": "isMac && editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        // Windows: Go To Definition
+        "key": "ctrl+b",
+        "command": "editor.action.revealDefinition",
+        "when": "!isMac&& editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    // =========================
+    // File Management
+    // =========================
+    {
+        // macOS: New File
+        "key": "cmd+n",
+        "command": "explorer.newFile",
+        "when": "isMac"
+    },
+    {
+        // Windows: New File
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "!isMac"
+    },
+    {
+        // macOS: New File
+        "key": "cmd+shift+n",
+        "command": "explorer.newFolder",
+        "when": "isMac"
+    },
+    {
+        // Windows: New File
+        "key": "ctrl+shift+n",
+        "command": "explorer.newFolder",
+        "when": "!isMac"
+    },
+    // =========================
+    // Search / Find / Replace
+    // =========================
+    {
+        // Find - Next 
+        "key": "f2",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        // macOS: Replace
+        "key": "cmd+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "isMac && editorFocus || editorIsOpen"
+    },
+    {
+        // Windows: Replace
+        "key": "ctrl+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "!isMac && editorFocus || editorIsOpen"
+    },
+    // =========================
+    // Problems
+    // =========================
+    {
+        // Next Problem
+        "key": "shift+f2",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    // =========================
+    // Run & Debug
+    // =========================
+    {
+        "key": "f7",
+        "command": "workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "f8",
+        "command": "workbench.action.debug.stepOut",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        // macOS: Toggle Breakpoint
+        "key": "cmd+k cmd+b",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "isMac && debuggersAvailable && editorTextFocus"
+    },
+    {
+        // Windows: Toggle Breakpoint
+        "key": "alt+k alt+b",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "!isMac&& debuggersAvailable && editorTextFocus"
+    },
+    // =========================
+    // Disabled
+    // =========================
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+[Equal]",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+cmd+7",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f9",
+        "command": "-editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && editorTextFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow"
+    },
+    {
+        "key": "cmd+k cmd+w",
+        "command": "-workbench.action.closeAllEditors"
+    },
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "cmd+6",
+        "command": "-workbench.action.focusSixthEditorGroup"
+    },
+    {
+        "key": "cmd+7",
+        "command": "-workbench.action.focusSeventhEditorGroup"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "cmd+8",
+        "command": "-workbench.action.focusEighthEditorGroup"
+    },
+    {
+        "key": "alt+cmd+f",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "shift+alt+1",
+        "command": "-workbench.action.moveEditorToFirstGroup",
+        "when": "!isMac"
+    },
+    {
+        "key": "shift+alt+9",
+        "command": "-workbench.action.moveEditorToLastGroup",
+        "when": "!isMac"
+    },
+    {
+        "key": "shift+alt+0",
+        "command": "-increaseSearchEditorContextLines",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+alt+0",
+        "command": "-workbench.action.toggleEditorGroupLayout",
+        "when": "!isMac"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "f2",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "alt+1",
+        "command": "-workbench.action.openEditorAtIndex1"
+    },
+    {
+        "key": "alt+2",
+        "command": "-workbench.action.openEditorAtIndex2"
+    },
+    {
+        "key": "alt+3",
+        "command": "-workbench.action.openEditorAtIndex3"
+    },
+    {
+        "key": "alt+4",
+        "command": "-workbench.action.openEditorAtIndex4"
+    },
+    {
+        "key": "alt+5",
+        "command": "-workbench.action.openEditorAtIndex5"
+    },
+    {
+        "key": "alt+6",
+        "command": "-workbench.action.openEditorAtIndex6"
+    },
+    {
+        "key": "alt+7",
+        "command": "-workbench.action.openEditorAtIndex7"
+    },
+    {
+        "key": "alt+8",
+        "command": "-workbench.action.openEditorAtIndex8"
+    },
+    {
+        "key": "alt+9",
+        "command": "-workbench.action.openEditorAtIndex9"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    }
+]

@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+echo "Copying VS Code User Config..."
+
+rsync \
+    -vrh \
+    ./user-data/ ~/Library/Application\ Support/Code/User;
+
+echo "Done."
+
 echo "Installing VS Code Extensions..."
 
 # Install VS Code Extensions
