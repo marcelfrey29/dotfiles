@@ -14,6 +14,7 @@
     "workbench.view.alwaysShowHeaderActions": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
     "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.splitInGroupLayout": "vertical",
@@ -21,7 +22,6 @@
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 8,
     "workbench.editor.limit.perEditorGroup": true,
-    "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.colorCustomizations": {
         "[GitHub Dark Dimmed]": {
             // Disable focus borders
@@ -115,16 +115,17 @@
     "diffEditor.ignoreTrimWhitespace": false,
     // Editor
     "editor.tabSize": 4,
-    "editor.tabCompletion": "on",
+    "editor.tabCompletion": "off",
     "editor.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Menlo, Consolas",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.codeLens": true,
     "editor.codeLensFontSize": 12,
     "editor.inlayHints.enabled": "on",
+    "editor.wordWrap": "off",
     "editor.lightbulb.enabled": true,
     "editor.cursorBlinking": "phase",
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.hover.enabled": true,
     "editor.hover.delay": 250,
     "editor.formatOnSave": true,
@@ -151,14 +152,18 @@
     "editor.minimap.showSlider": "always",
     "editor.minimap.maxColumn": 60,
     "editor.semanticHighlighting.enabled": true,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.stablePeek": false,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
+    "editor.wordBasedSuggestions": true,
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
         "strings": false
     },
+    "editor.quickSuggestionsDelay": 5,
     "editor.tokenColorCustomizations": {
         "[GitHub Dark Dimmed]": {
             // "comments": "",
@@ -197,21 +202,35 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.scrollback": 100000,
-    // Languages
-    "[markdown]": {
-        "editor.wordWrap": "off"
-    },
     // Extensions
     "extensions.ignoreRecommendations": true,
-    // Extensions | Terraform
-    "terraform.codelens.referenceCount": true,
-    "terraform.languageServer.enable": true,
-    // Extensions | TypeScript
+    // Language - Rust
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
+    // Language - JavaScript
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+    // Language - TypeScript
     "typescript.implementationsCodeLens.enabled": true,
-    // Extensions | Vim
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+    // Language - XML
+    "xml.codeLens.enabled": true,
+    // Language - Terraform
+    "terraform.codelens.referenceCount": true,
+    "terraform.languageServer.enable": true
+    // Extensions - Vim
     // "vim.useCtrlKeys": false,
-    // Extensions | Vue / Volar
-    "volar.codeLens.scriptSetupTools": true,
-    "editor.stablePeek": true,
-    "editor.bracketPairColorization.enabled": false
 }
