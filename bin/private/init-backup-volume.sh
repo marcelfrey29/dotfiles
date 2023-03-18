@@ -11,8 +11,8 @@ if [[ -z "$1" ]]; then
 fi
 
 # Ask for confirmation
-read -p "Initialize backup directory in '$1'? (y/n) " confirmation
-if [ $confirmation == "y" ]; then
+read "confirmation?Initialize backup directory in '$1'? (y/n) "
+if [[ $confirmation == "y" ]]; then
     echo "Initializing Backup directory..."
 
     # Create Device Directories
@@ -75,10 +75,10 @@ if [ $confirmation == "y" ]; then
         # Type
         for type in "${backupType[@]}"; do
             # Paths
-            for path in "${backupPaths[@]}"; do
+            for backup_path in "${backupPaths[@]}"; do
                 # Strategy
                 for variant in "${backupVariants[@]}"; do
-                    mkdir -p "$fullBackupRootPath/$device/$type/$path/$variant"
+                    mkdir -p "$fullBackupRootPath/$device/$type/$backup_path/$variant";
                 done
             done
         done
