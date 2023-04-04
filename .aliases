@@ -11,3 +11,6 @@ alias tfw="terraform workspace"
 
 # Ansible
 alias ap="ansible-playbook"
+
+# EXA
+alias ll="exa"

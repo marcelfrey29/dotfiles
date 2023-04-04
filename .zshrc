@@ -7,3 +7,6 @@ source ~/.aliases
 
 # Add ~/.bin to PATH
 export PATH=~/.bin:~/.bin/private:$PATH
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
