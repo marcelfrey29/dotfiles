@@ -230,7 +230,11 @@
     "xml.codeLens.enabled": true,
     // Language - Terraform
     "terraform.codelens.referenceCount": true,
-    "terraform.languageServer.enable": true
+    "terraform.languageServer.enable": true,
+    // Language Markdown
+    "[markdown]": {
+        "editor.wordWrap": "off" // Explicitly required...
+    }
     // Extensions - Vim
     // "vim.useCtrlKeys": false,
 }
