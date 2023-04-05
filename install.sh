@@ -13,6 +13,7 @@ echo "Running installation scripts..."
 # Copy to Home
 echo "Copying data to Home directory..."
 rsync \
+    --exclude ".DS_Store" \
     --exclude ".git/" \
     --exclude "bin" \
     --exclude "homebrew" \
