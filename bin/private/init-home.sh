@@ -17,4 +17,8 @@ mkdir -p Developer/GitLab/marcelfrey29
 mkdir -p Developer/Local/marcelfrey29
 mkdir -p Developer/Playground/marcelfrey29
 
+# Docker Volumes
+# Example Mount: ~/.docker_volumes/<project>/<container>/<[...]>:/path/in/container
+mkdir -p .docker_volumes
+
 echo "Home directory is ready."

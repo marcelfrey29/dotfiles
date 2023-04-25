@@ -15,6 +15,11 @@
 
 - Run the `install.sh` script
 
+## Post-Setup
+
+- Docker
+    - Configure file sharing: Allow Docker to mount the `~/.docker_volumes` directory
+
 ## Credits
 
 I got inspiration from following repositories:

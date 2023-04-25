@@ -11,6 +11,7 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH" # libpg (Not automatically symli
 
 # Make compilers (e.g. rustc) find libpg
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export PQ_LIB_DIR="/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 
 # fzf
