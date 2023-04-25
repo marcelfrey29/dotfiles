@@ -41,6 +41,8 @@ declare homebrew_formulae_list=(
     # "openjdk@11"
     # "rust" # Rust is installed via Rustup
     # "python@3.9"
+    # Packages / Libraries
+    "libpq" # Required for diesel.rs (Postgres C API Library)
 )
 
 brew_formulas_install "${homebrew_formulae_list[@]}"

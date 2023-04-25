@@ -34,4 +34,10 @@ rsync \
 echo "Source .zshrc to apply latest changes..."
 source ~/.zshrc
 
+# Install Rust binaries
+# Installation and compilation relies on packages and configurations made
+# abvove like Homebrew formulares and exports in the .zshrc. So don't change
+# the order.
+./rust/cargo-install.sh
+
 echo "Setup complete."
