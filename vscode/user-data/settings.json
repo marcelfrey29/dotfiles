@@ -234,6 +234,73 @@
     // Language Markdown
     "[markdown]": {
         "editor.wordWrap": "off" // Explicitly required...
+    },
+    // Todo-Tree
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.highlights.highlightDelay": 0,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.tree.expanded": true,
+    "todo-tree.tree.flat": true,
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.general.tags": [
+        "TODO",
+        "BUG",
+        "FIXME",
+        "FIXIT",
+        "WORKAROUND",
+        "NOTE",
+        "INFO"
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check-circle",
+            "iconColour": "#daaa3f",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#daaa3f"
+        },
+        "BUG": {
+            "icon": "x-circle",
+            "iconColour": "#F47067",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#F47067"
+        },
+        "FIXME": {
+            "icon": "alert",
+            "iconColour": "#F69D50",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#F69D50"
+        },
+        "FIXIT": {
+            "icon": "alert",
+            "iconColour": "#F69D50",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#F69D50"
+        },
+        "WORKAROUND": {
+            "icon": "tools",
+            "iconColour": "#6cb6ff",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#6cb6ff"
+        },
+        "INFO": {
+            "icon": "light-bulb",
+            "iconColour": "#6cb6ff",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#6cb6ff"
+        },
+        "NOTE": {
+            "icon": "file",
+            "iconColour": "#6BC46DBF",
+            "gutterIcon": true,
+            "foreground": "#000000",
+            "background": "#6BC46DBF"
+        }
     }
     // Extensions - Vim
     // "vim.useCtrlKeys": false,
