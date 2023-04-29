@@ -15,4 +15,8 @@ rustup completions zsh > ~/.zfunc/_rustup
 echo "Updating Rust..."
 rustup update stable
 
+# Compilation targets
+echo "Adding compilation targets..."
+rustup target add wasm32-unknown-unknown # Rust to WASM
+
 echo "Rust is ready to use."
