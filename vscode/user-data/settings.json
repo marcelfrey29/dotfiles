@@ -301,7 +301,20 @@
             "foreground": "#000000",
             "background": "#6BC46DBF"
         }
-    }
+    },
     // Extensions - Vim
     // "vim.useCtrlKeys": false,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 1500,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ]
 }
