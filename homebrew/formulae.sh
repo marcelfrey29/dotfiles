@@ -28,6 +28,7 @@ declare homebrew_formulae_list=(
     "exa" # "ls" replacement
     "fzf" # Command-line fuzzy finder
     # "nano"
+    "wget"
     "ansible"
     "terraform"
     # "gradle"
