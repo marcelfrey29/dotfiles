@@ -24,6 +24,7 @@ declare homebrew_cask_list=(
     # Productivity
     "standard-notes"
     "firefox"
+    "google-chrome"
     # "homebrew/cask-versions/google-chrome-dev"
     # Developer Tools
     "visual-studio-code"
