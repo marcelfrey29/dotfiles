@@ -8,6 +8,12 @@
         "command": "workbench.action.quickOpenWithModes"
     },
     {
+        // Open "Find Symbol in File..."
+        "key": "f1",
+        "command": "workbench.action.gotoSymbol",
+        "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
         // Escape to go back (but not from terminal because this breaks "vi")
         "key": "escape",
         "command": "workbench.action.focusActiveEditorGroup",
@@ -118,6 +124,18 @@
         "when": "isMac"
     },
     {
+        // macOS: 8 - References View
+        "key": "cmd+8",
+        "command": "workbench.view.extension.references-view",
+        "when": "isMac"
+    },
+    {
+        // Windows: 8 - References View
+        "key": "cmd+8",
+        "command": "workbench.view.extension.references-view",
+        "when": "!isMac"
+    },
+    {
         // Windows: 7 - Focus Outline
         "key": "alt+7",
         "command": "outline.focus",
@@ -159,11 +177,50 @@
         "command": "workbench.debug.action.focusBreakpointsView",
         "when": "!isMac"
     },
+    // =========================
+    // Navigation - Terminal
+    // =========================
     {
         // Terminal
         "key": "f12",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
+    },
+    {
+        // macOS: New Terminal
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus && isMac"
+    },
+    {
+        // Windows: New Terminal
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus && !isMac"
+    },
+    {
+        // macOS: Editor - Close Terminal
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.killActiveTab",
+        "when": "isMac && terminalFocus"
+    },
+    {
+        // Windows: Editor - Close Terminal
+        "key": "ctrl+w",
+        "command": "workbench.action.terminal.killActiveTab",
+        "when": "!isMac && terminalFocus"
+    },
+    {
+        // Terminal - Next Tab
+        "key": "shift+alt+l",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        // Terminal - Previous Tab
+        "key": "shift+alt+h",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
     },
     // =========================
     // Navigation - Vim in Lists 
@@ -196,26 +253,40 @@
         // Down
         "key": "j",
         "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
+        "when": "(problemFocus || problemsViewMode && !inputFocus) || (listFocus && !inputFocus)"
     },
     {
         // Up
         "key": "k",
         "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
+        "when": "(problemFocus || problemsViewMode && !inputFocus) || (listFocus && !inputFocus)"
     },
     // =========================
     // Navigation - Tabs
     // =========================
     {
-        // Next Tab
-        "key": "shift+alt+l",
-        "command": "workbench.action.nextEditor"
+        // macOS: Editor - Close Tab
+        "key": "cmd+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "isMac && !terminalFocus"
     },
     {
-        // Previous Tab
+        // Windows: Editor - Close Tab
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!isMac && !terminalFocus"
+    },
+    {
+        // Editor - Next Tab
+        "key": "shift+alt+l",
+        "command": "workbench.action.nextEditor",
+        "when": "!terminalFocus"
+    },
+    {
+        // Editor - Previous Tab
         "key": "shift+alt+h",
-        "command": "workbench.action.previousEditor"
+        "command": "workbench.action.previousEditor",
+        "when": "!terminalFocus"
     },
     {
         // macOS: Create Split
@@ -407,13 +478,13 @@
         // macOS: New File
         "key": "cmd+n",
         "command": "explorer.newFile",
-        "when": "isMac"
+        "when": "isMac && !terminalFocus"
     },
     {
         // Windows: New File
         "key": "ctrl+n",
         "command": "explorer.newFile",
-        "when": "!isMac"
+        "when": "!isMac && !terminalFocus"
     },
     {
         // macOS: New File
@@ -646,5 +717,10 @@
         "key": "enter",
         "command": "-renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     }
 ]
