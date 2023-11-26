@@ -5,6 +5,8 @@
     "workbench.enableExperiments": false,
     // Window
     "window.commandCenter": true,
+    // Activity Bar
+    "workbench.activityBar.location": "top",
     // Workbench
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 24,
@@ -74,8 +76,60 @@
             // UI
             "button.background": "#6CB6FF",
             "button.hoverBackground": "#4C96FF"
+        },
+        "[GitHub Light]": {
+            "focusBorder": "#00000000",
+            "titleBar.border": "#00000000",
+            "activityBar.border": "#00000000",
+            "editorWidget.border": "#00000000",
+            "activityBarBadge.background": "#0969da",
+            "activityBarBadge.foreground": "#ffffff",
+            "activityBar.activeBackground": "#6A737D30",
+            "scrollbarSlider.background": "#6A737D50",
+            "editorCursor.foreground": "#0969da",
+            "editorLineNumber.activeForeground": "#0969da",
+            "editor.lineHighlightBackground": "#6A737D20",
+            "editorGutter.addedBackground": "#2da44e",
+            "editorGutter.modifiedBackground": "#54aeff",
+            "editorGutter.deletedBackground": "#ec6547",
+            "badge.background": "#0969da",
+            "badge.foreground": "#ffffff",
+            "gitDecoration.modifiedResourceForeground": "#54aeff",
+            "icon.foreground": "#6A737D",
+            "symbolIcon.keywordForeground": "#ec6547",
+            "symbolIcon.methodForeground": "#0969da",
+            "symbolIcon.functionForeground": "#0969da",
+            "symbolIcon.constructorForeground": "#0969da",
+            "symbolIcon.enumeratorMemberForeground": "#0969da",
+            "symbolIcon.classForeground": "#ec6547",
+            "symbolIcon.interfaceForeground": "#ec6547",
+            "symbolIcon.structForeground": "#ec6547",
+            "symbolIcon.moduleForeground": "#ec6547",
+            "symbolIcon.namespaceForeground": "#ec6547",
+            "symbolIcon.packageForeground": "#ec6547",
+            "symbolIcon.objectForeground": "#ec6547",
+            "symbolIcon.arrayForeground": "#ec6547",
+            "symbolIcon.propertyForeground": "#6A737D",
+            "symbolIcon.fieldForeground": "#6A737D",
+            "symbolIcon.referenceForeground": "#d4a72c",
+            "symbolIcon.variableForeground": "#d4a72c",
+            "symbolIcon.numberForeground": "#a475f9",
+            "symbolIcon.stringForeground": "#116329",
+            "symbolIcon.textForeground": "#116329",
+            "button.background": "#0969da",
+            "button.hoverBackground": "#54aeff",
+            "tab.activeBorderTop": "#0969da",
+            "activityBar.activeBorder": "#0969da",
+            "panelSection.border": "#0969da",
+            "panelSectionHeader.border": "#0969da",
+            "terminal.tab.activeBorder": "#0969da",
+            "panelSectionHeader.foreground": "#0969da"
         }
     },
+    // Explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
     // Outline
     "outline.showVariables": false,
     "outline.showProperties": true,
@@ -91,20 +145,16 @@
         "outline.showVariables": false,
         "outline.showConstants": false
     },
+    // Search
+    "search.showLineNumbers": true,
+    // Zen Mode
+    "zenMode.hideLineNumbers": false,
     // Files
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 5000,
-    // Zen Mode
-    "zenMode.hideLineNumbers": false,
-    // Sidebar / Explorer
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.openEditors.visible": 0,
-    // Search
-    "search.showLineNumbers": true,
     // Breadcrumbs
     "breadcrumbs.enabled": false,
-    // Git
+    // Source Control / Git
     "scm.alwaysShowActions": true,
     "scm.diffDecorationsGutterWidth": 4,
     "scm.inputFontFamily": "editor",
@@ -163,7 +213,8 @@
         "comments": false,
         "strings": false
     },
-    "editor.quickSuggestionsDelay": 5,
+    "editor.quickSuggestionsDelay": 100,
+    "editor.multiDocumentOccurrencesHighlight": true,
     "editor.tokenColorCustomizations": {
         "[GitHub Dark Dimmed]": {
             // "comments": "",
@@ -184,18 +235,38 @@
                     }
                 }
             ]
+        },
+        "[GitHub Light]": {
+            // "comments": "",
+            // "keywords": "",
+            "functions": "#0969da",
+            "strings": "#116329",
+            "numbers": "#a475f9",
+            "types": "#ec6547",
+            "variables": "#d4a72c",
+            "textMateRules": [
+                {
+                    "name": "Lighgray (Default Text)",
+                    "scope": [
+                        "keyword.operator.assignment"
+                    ],
+                    "settings": {
+                        "foreground": "#6A737D"
+                    }
+                }
+            ]
         }
     },
     "editor.accessibilitySupport": "off",
     // Problems
-    "problems.showCurrentInStatus": true,
     "problems.defaultViewMode": "table",
+    "problems.showCurrentInStatus": true,
     // Debugger
     "debug.inlineValues": "on",
     "debug.showInStatusBar": "always",
     "debug.console.fontFamily": "'JetBrains Mono', 'Fira Code'",
     "debug.showBreakpointsInOverviewRuler": true,
-    "debug.toolBarLocation": "docked",
+    "debug.toolBarLocation": "commandCenter",
     // Terminal
     "terminal.integrated.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Menlo, Consolas",
     "terminal.integrated.fontSize": 14,
@@ -232,7 +303,8 @@
     // Language - Terraform
     "terraform.codelens.referenceCount": true,
     "terraform.languageServer.enable": true,
-    // Language Markdown
+    "terraform.experimentalFeatures.validateOnSave": true,
+    // Language - Markdown
     "[markdown]": {
         "editor.wordWrap": "off" // Explicitly required...
     },
@@ -243,14 +315,14 @@
     "todo-tree.tree.expanded": true,
     "todo-tree.tree.flat": true,
     "todo-tree.tree.showCountsInTree": true,
+    // The values of the next two properties must be in order!
+    // Example: `todo-tree.general.tags[0]` (here `"TODO"`) must be the first element in 
+    // the `todo-tree.highlights.customHighlight` object (here: `"TODO": {}`).
     "todo-tree.general.tags": [
         "TODO",
         "BUG",
         "FIXME",
-        "FIXIT",
-        "WORKAROUND",
-        "NOTE",
-        "INFO"
+        "FIXIT"
     ],
     "todo-tree.highlights.customHighlight": {
         "TODO": {
@@ -280,27 +352,6 @@
             "gutterIcon": true,
             "foreground": "#000000",
             "background": "#F69D50"
-        },
-        "WORKAROUND": {
-            "icon": "tools",
-            "iconColour": "#6cb6ff",
-            "gutterIcon": true,
-            "foreground": "#000000",
-            "background": "#6cb6ff"
-        },
-        "INFO": {
-            "icon": "light-bulb",
-            "iconColour": "#6cb6ff",
-            "gutterIcon": true,
-            "foreground": "#000000",
-            "background": "#6cb6ff"
-        },
-        "NOTE": {
-            "icon": "file",
-            "iconColour": "#6BC46DBF",
-            "gutterIcon": true,
-            "foreground": "#000000",
-            "background": "#6BC46DBF"
         }
     },
     // Extensions - Vim
