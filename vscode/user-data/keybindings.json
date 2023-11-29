@@ -131,7 +131,7 @@
     },
     {
         // Windows: 8 - References View
-        "key": "cmd+8",
+        "key": "alt+8",
         "command": "workbench.view.extension.references-view",
         "when": "!isMac"
     },
