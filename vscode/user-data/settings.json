@@ -267,6 +267,7 @@
     "debug.console.fontFamily": "'JetBrains Mono', 'Fira Code'",
     "debug.showBreakpointsInOverviewRuler": true,
     "debug.toolBarLocation": "commandCenter",
+    "debug.allowBreakpointsEverywhere": true,
     // Terminal
     "terminal.integrated.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Menlo, Consolas",
     "terminal.integrated.fontSize": 14,

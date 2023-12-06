@@ -47,6 +47,8 @@ declare vscode_extension_list=(
     "ms-vscode-remote.remote-ssh-edit"
     "ms-vscode.remote-explorer"
     "rust-lang.rust-analyzer"
+    # Required for Rust Debugging
+    "ms-vscode.cpptools"
     # "vscjava.vscode-spring-boot-dashboard"
     # "Pivotal.vscode-spring-boot"
     # "vscjava.vscode-spring-initializr"
