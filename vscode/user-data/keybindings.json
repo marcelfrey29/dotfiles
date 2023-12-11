@@ -126,13 +126,13 @@
     {
         // macOS: 8 - References View
         "key": "cmd+8",
-        "command": "workbench.view.extension.references-view",
+        "command": "references-view.tree.focus",
         "when": "isMac"
     },
     {
         // Windows: 8 - References View
         "key": "alt+8",
-        "command": "workbench.view.extension.references-view",
+        "command": "references-view.tree.focus",
         "when": "!isMac"
     },
     {
@@ -154,15 +154,15 @@
         "when": "!isMac"
     },
     {
-        // macOS: 9 - Reference View
+        // macOS: 9 - Documentation View
         "key": "cmd+9",
-        "command": "references-view.tree.focus",
+        "command": "docsView.documentation.focus",
         "when": "isMac"
     },
     {
-        // Windows: 9 - Reference View
+        // Windows: 9 - Documentation View
         "key": "alt+9",
-        "command": "references-view.tree.focus",
+        "command": "docsView.documentation.focus",
         "when": "!isMac"
     },
     {

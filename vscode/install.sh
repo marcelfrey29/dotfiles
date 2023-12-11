@@ -59,6 +59,8 @@ declare vscode_extension_list=(
     "Vue.volar"
     "redhat.vscode-xml"
     "redhat.vscode-yaml"
+    "bierner.docs-view"
+    "bierner.markdown-mermaid"
 )
 
 vscode_install_extensions "${vscode_extension_list[@]}"
