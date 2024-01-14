@@ -61,6 +61,10 @@ declare vscode_extension_list=(
     "redhat.vscode-yaml"
     "bierner.docs-view"
     "bierner.markdown-mermaid"
+    "bierner.markdown-emoji"
+    "bierner.markdown-checkbox"
+    "bierner.markdown-yaml-preamble"
+    "bierner.markdown-footnotes"
 )
 
 vscode_install_extensions "${vscode_extension_list[@]}"
