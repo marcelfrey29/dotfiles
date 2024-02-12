@@ -280,6 +280,11 @@
     "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
     "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
     "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.rustfmt.overrideCommand": [
+        "leptosfmt",
+        "--stdin",
+        "--rustfmt"
+    ],
     // Language - JavaScript
     "javascript.inlayHints.enumMemberValues.enabled": true,
     "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
