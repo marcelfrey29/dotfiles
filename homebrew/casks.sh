@@ -26,6 +26,11 @@ declare homebrew_cask_list=(
     "firefox"
     "google-chrome"
     # "homebrew/cask-versions/google-chrome-dev"
+    "microsoft-word"
+    "microsoft-excel"
+    "microsoft-powerpoint"
+    "microsoft-onenote"
+    "microsoft-outlook"
     # Developer Tools
     "visual-studio-code"
     # "jetbrains-toolbox"
@@ -42,8 +47,10 @@ declare homebrew_cask_list=(
     "vlc"
     # Social Media
     # "webex-meetings"
-    # "zoom"
+    "zoom"
+    "microsoft-teams"
     "discord"
+    "gotomeeting"
     # Other
     "ledger-live"
     # Fonts
