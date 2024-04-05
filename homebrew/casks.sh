@@ -31,6 +31,7 @@ declare homebrew_cask_list=(
     "microsoft-powerpoint"
     "microsoft-onenote"
     "microsoft-outlook"
+    "zotero"
     # Developer Tools
     "visual-studio-code"
     # "jetbrains-toolbox"
