@@ -46,6 +46,7 @@ declare homebrew_cask_list=(
     "keepassxc"
     # Entertainment
     "vlc"
+    "spotify"
     # Social Media
     # "webex-meetings"
     "zoom"
