@@ -17,7 +17,13 @@
         // Escape to go back (but not from terminal because this breaks "vi")
         "key": "escape",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus || auxiliaryBarFocus || docsView.documentation.active || panelFocus && !terminalFocus"
+        "when": "sideBarFocus || auxiliaryBarFocus || panelFocus && !terminalFocus"
+    },
+    {
+        // Escape to go back from docs view (required, without some other escape is broken...)
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "docsView.documentation.active && !editorFocus && !terminalFocus"
     },
     {
         // Escape to go back when in "vi" in integrated terminal
