@@ -519,6 +519,30 @@
         "command": "editor.action.startFindReplaceAction",
         "when": "!isMac && editorFocus || editorIsOpen"
     },
+    {
+        // macOS: In List Search
+        "key": "cmd+f",
+        "command": "list.find",
+        "when": "listFocus && listSupportsFind && isMac"
+    },
+    {
+        // Windows: In List Search
+        "key": "ctrl+f",
+        "command": "list.find",
+        "when": "listFocus && listSupportsFind && !isMac"
+    },
+    {
+        // macOS: In List Search - Close 
+        "key": "escape",
+        "command": "list.closeFind",
+        "when": "listFocus && treeFindOpen && isMac"
+    },
+    {
+        // Windows: In List Search - Close 
+        "key": "escape",
+        "command": "list.closeFind",
+        "when": "listFocus && treeFindOpen && !isMac"
+    },
     // =========================
     // Problems
     // =========================
