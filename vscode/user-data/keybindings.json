@@ -17,7 +17,7 @@
         // Escape to go back (but not from terminal because this breaks "vi")
         "key": "escape",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus || auxiliaryBarFocus || panelFocus && !terminalFocus"
+        "when": "sideBarFocus || auxiliaryBarFocus || docsView.documentation.active || panelFocus && !terminalFocus"
     },
     {
         // Escape to go back when in "vi" in integrated terminal
@@ -94,18 +94,6 @@
     // Navigation - Tool Windows
     // =========================
     {
-        // macOS: 1 - Focus Explorer
-        "key": "cmd+1",
-        "command": "workbench.explorer.fileView.focus",
-        "when": "isMac"
-    },
-    {
-        // Windows: 1 - Focus Explorer
-        "key": "alt+1",
-        "command": "workbench.explorer.fileView.focus",
-        "when": "!isMac"
-    },
-    {
         // macOS: 0 - Focus SCM
         "key": "cmd+0",
         "command": "workbench.scm.focus",
@@ -118,10 +106,76 @@
         "when": "!isMac"
     },
     {
+        // macOS: 1 - Focus Explorer
+        "key": "cmd+1",
+        "command": "workbench.explorer.fileView.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 1 - Focus Explorer
+        "key": "alt+1",
+        "command": "workbench.explorer.fileView.focus",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 2 - Focus Explorer
+        "key": "cmd+2",
+        "command": "todo-tree-view.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 2 - Focus Explorer
+        "key": "alt+2",
+        "command": "todo-tree-view.focus",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 3 - Focus Problem View
+        "key": "cmd+3",
+        "command": "workbench.actions.view.problems",
+        "when": "isMac"
+    },
+    {
+        // Windows: 3 - Focus Problem View
+        "key": "alt+3",
+        "command": "workbench.actions.view.problems",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 5 - Run&Debug View
+        "key": "cmd+5",
+        "command": "workbench.view.debug",
+        "when": "isMac"
+    },
+    {
+        // Windows: 5 - Run&Debug View
+        "key": "alt+5",
+        "command": "workbench.view.debug",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 6 - Output View
+        "key": "cmd+6",
+        "command": "workbench.panel.output.focus",
+        "when": "isMac"
+    },
+    {
+        // Windows: 6 - Output
+        "key": "alt+6",
+        "command": "workbench.panel.output.focus",
+        "when": "!isMac"
+    },
+    {
         // macOS: 7 - Focus Outline
         "key": "cmd+7",
         "command": "outline.focus",
         "when": "isMac"
+    },
+    {
+        // Windows: 7 - Focus Outline
+        "key": "alt+7",
+        "command": "outline.focus",
+        "when": "!isMac"
     },
     {
         // macOS: 8 - References View
@@ -136,24 +190,6 @@
         "when": "!isMac"
     },
     {
-        // Windows: 7 - Focus Outline
-        "key": "alt+7",
-        "command": "outline.focus",
-        "when": "!isMac"
-    },
-    {
-        // macOS: 6 - Focus Problem View
-        "key": "cmd+6",
-        "command": "workbench.actions.view.problems",
-        "when": "isMac"
-    },
-    {
-        // Windows: 6 - Focus Problem View
-        "key": "alt+6",
-        "command": "workbench.actions.view.problems",
-        "when": "!isMac"
-    },
-    {
         // macOS: 9 - Documentation View
         "key": "cmd+9",
         "command": "docsView.documentation.focus",
@@ -163,18 +199,6 @@
         // Windows: 9 - Documentation View
         "key": "alt+9",
         "command": "docsView.documentation.focus",
-        "when": "!isMac"
-    },
-    {
-        // macOS: 3 - Breakpoint (Run&Debug) View
-        "key": "cmd+3",
-        "command": "workbench.debug.action.focusBreakpointsView",
-        "when": "isMac"
-    },
-    {
-        // Windows: 3 - Breakpoint (Run&Debug) View
-        "key": "alt+3",
-        "command": "workbench.debug.action.focusBreakpointsView",
         "when": "!isMac"
     },
     // =========================
@@ -746,5 +770,13 @@
         "key": "enter",
         "command": "-renameFile",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "cmd+9",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "alt+9",
+        "command": "-workbench.action.lastEditorInGroup"
     }
 ]
