@@ -17,6 +17,7 @@
     "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.iconTheme": "symbols",
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.splitInGroupLayout": "vertical",
@@ -154,6 +155,9 @@
     "files.autoSaveDelay": 5000,
     // Breadcrumbs
     "breadcrumbs.enabled": false,
+    "breadcrumbs.filePath": "on",
+    "breadcrumbs.icons": true,
+    "breadcrumbs.symbolSortOrder": "position",
     // Source Control / Git
     "scm.alwaysShowActions": true,
     "scm.diffDecorationsGutterWidth": 4,
@@ -163,6 +167,9 @@
     "git.confirmSync": false,
     "diffEditor.codeLens": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
     // Editor
     "editor.tabSize": 4,
     "editor.tabCompletion": "off",
@@ -204,6 +211,7 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.bracketPairColorization.enabled": false,
     "editor.stablePeek": false,
+    "editor.stickyScroll.enabled": false,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
@@ -261,10 +269,13 @@
     // Problems
     "problems.defaultViewMode": "table",
     "problems.showCurrentInStatus": true,
+    "problems.decorations.enabled": true,
     // Debugger
     "debug.inlineValues": "on",
     "debug.showInStatusBar": "always",
-    "debug.console.fontFamily": "'JetBrains Mono', 'Fira Code'",
+    "debug.console.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Menlo, Consolas",
+    "debug.console.fontSize": 13,
+    "debug.console.collapseIdenticalLines": true,
     "debug.showBreakpointsInOverviewRuler": true,
     "debug.toolBarLocation": "commandCenter",
     "debug.allowBreakpointsEverywhere": true,
@@ -276,6 +287,14 @@
     "terminal.integrated.scrollback": 100000,
     // Extensions
     "extensions.ignoreRecommendations": true,
+    // Language - Go
+    "gopls": {
+        "ui.semanticTokens": true,
+    },
+    "[go]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "golang.go"
+    },
     // Language - Rust
     "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "always",
     "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
@@ -314,6 +333,10 @@
     "[markdown]": {
         "editor.wordWrap": "off" // Explicitly required...
     },
+    // Icon Theme - Symbols
+    "symbols.files.associations": {},
+    "symbols.folders.associations": {},
+    "symbols.hidesExplorerArrows": false,
     // Todo-Tree
     "todo-tree.general.showActivityBarBadge": true,
     "todo-tree.highlights.highlightDelay": 0,
@@ -361,7 +384,7 @@
         }
     },
     // Extensions - Vim
-    // "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.duration": 1500,
     "vim.insertModeKeyBindings": [
@@ -374,5 +397,34 @@
                 "<Esc>"
             ]
         }
-    ]
+    ],
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": [
+        "#00000000",
+        "#818b98",
+    ],
+    "vim.statusBarColors.insert": [
+        "#00000000",
+        "#6cb6ff"
+    ],
+    "vim.statusBarColors.visual": [
+        "#00000000",
+        "#6bc46d"
+    ],
+    "vim.statusBarColors.visualline": [
+        "#00000000",
+        "#6bc46d"
+    ],
+    "vim.statusBarColors.commandlineinprogress": [
+        "#0969da",
+        "#f6f8fa"
+    ],
+    "vim.statusBarColors.searchinprogressmode": [
+        "#9a6700",
+        "#f6f8fa"
+    ],
+    "vim.statusBarColors.surroundinputmode": [
+        "#8250df",
+        "#f6f8fa"
+    ],
 }

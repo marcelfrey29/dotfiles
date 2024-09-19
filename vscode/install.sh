@@ -29,42 +29,52 @@ function vscode_install_extensions() {
 
 # Extension List
 declare vscode_extension_list=(
-    # "redhat.ansible"
-    # "vscjava.vscode-java-debug"
-    "ms-azuretools.vscode-docker"
-    "EditorConfig.EditorConfig"
-    "dbaeumer.vscode-eslint"
-    "tamasfe.even-better-toml"
-    "GitHub.github-vscode-theme"
-    # "golang.go"
-    "hashicorp.terraform"
-    "42Crunch.vscode-openapi"
-    # "redhat.java"
-    # "vscjava.vscode-maven"
-    # "vscjava.vscode-java-dependency"
-    # "ms-python.python"
-    "ms-vscode-remote.remote-ssh"
-    "ms-vscode-remote.remote-ssh-edit"
-    "ms-vscode.remote-explorer"
-    "rust-lang.rust-analyzer"
-    # Required for Rust Debugging
-    "ms-vscode.cpptools"
-    # "vscjava.vscode-spring-boot-dashboard"
-    # "Pivotal.vscode-spring-boot"
-    # "vscjava.vscode-spring-initializr"
-    # "miguelsolorio.symbols"
-    # "vscjava.vscode-java-test"
-    "Gruntfuggly.todo-tree"
+    # General 
     "vscodevim.vim"
-    "Vue.volar"
-    "redhat.vscode-xml"
-    "redhat.vscode-yaml"
+    "GitHub.github-vscode-theme"
+    "miguelsolorio.symbols"
     "bierner.docs-view"
+    "Gruntfuggly.todo-tree"
+    "EditorConfig.EditorConfig"
+    # JavaScript / TypeScript
+    "Vue.volar"
+    # Go
+    "golang.go"
+    # Rust
+    # "rust-lang.rust-analyzer"
+    # "tamasfe.even-better-toml"
+    # Required for Rust Debugging
+    # "ms-vscode.cpptools"
+    # Java
+    # "redhat.java"
+    # "mathiasfrohlich.kotlin"
+    # "vscjava.vscode-maven"
+    # "vscjava.vscode-gradle"
+    # "vscjava.vscode-java-test"
+    # "vscjava.vscode-java-debug"
+    # "vscjava.vscode-java-dependency"
+    # "Pivotal.vscode-spring-boot"
+    # "vscjava.vscode-spring-boot-dashboard"
+    # "vscjava.vscode-spring-initializr"
+    # Python
+    # "ms-python.python"
+    # Infrastructure as Code
+    "redhat.ansible"
+    "hashicorp.terraform"
+    # Docker & K8s
+    "ms-azuretools.vscode-docker"
+    "ms-kubernetes-tools.vscode-kubernetes-tools"
+    # APIs
+    "42Crunch.vscode-openapi"
+    # Markdown
     "bierner.markdown-mermaid"
     "bierner.markdown-emoji"
     "bierner.markdown-checkbox"
     "bierner.markdown-yaml-preamble"
     "bierner.markdown-footnotes"
+    # Other
+    "redhat.vscode-xml"
+    "redhat.vscode-yaml"
 )
 
 vscode_install_extensions "${vscode_extension_list[@]}"
