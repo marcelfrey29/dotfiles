@@ -38,6 +38,7 @@ declare vscode_extension_list=(
     "EditorConfig.EditorConfig"
     # JavaScript / TypeScript
     "Vue.volar"
+    "biomejs.biome"
     # Go
     "golang.go"
     # Rust
