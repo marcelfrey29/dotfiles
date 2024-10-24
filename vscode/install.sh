@@ -39,6 +39,7 @@ declare vscode_extension_list=(
     # JavaScript / TypeScript
     "Vue.volar"
     "biomejs.biome"
+    "bradlc.vscode-tailwindcss"
     # Go
     "golang.go"
     # Rust
