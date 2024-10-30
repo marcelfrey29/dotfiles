@@ -18,6 +18,7 @@
     "workbench.preferredLightColorTheme": "GitHub Light",
     "workbench.colorTheme": "GitHub Dark Dimmed",
     "workbench.iconTheme": "symbols",
+    "workbench.panel.showLabels": false,
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.splitInGroupLayout": "vertical",
