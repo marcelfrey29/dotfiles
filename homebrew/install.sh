@@ -7,11 +7,6 @@ if ! command -v brew &> /dev/null; then
     echo "Installed Homebrew."
 fi
 
-# Add Repository
-echo "Adding Repositories..."
-brew tap homebrew/cask
-brew tap homebrew/cask-fonts
-
 # Update Homebrew
 echo "Updating Homebrew..."
 brew update
