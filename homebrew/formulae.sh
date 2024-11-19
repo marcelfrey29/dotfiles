@@ -25,7 +25,6 @@ declare homebrew_formulae_list=(
     # "pandoc"
     # Developer Tools
     "starship"
-    "exa" # "ls" replacement
     "fzf" # Command-line fuzzy finder
     # "nano"
     "wget"
