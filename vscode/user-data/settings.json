@@ -149,6 +149,8 @@
     },
     // Search
     "search.showLineNumbers": true,
+    // AI / Chat / Copilot
+    "chat.commandCenter.enabled": false,
     // Zen Mode
     "zenMode.hideLineNumbers": false,
     // Files
