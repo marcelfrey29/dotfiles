@@ -32,6 +32,7 @@ declare homebrew_formulae_list=(
     "terraform"
     # "gradle"
     # "maven"
+    "bearer/tap/bearer"
     # Programming Languages
     "go"
     # "go@1.16"
