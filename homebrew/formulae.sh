@@ -29,6 +29,7 @@ declare homebrew_formulae_list=(
     "fzf" # Command-line fuzzy finder
     # "nano"
     "wget"
+    "bruno"
     "ansible"
     "terraform"
     # "gradle"
