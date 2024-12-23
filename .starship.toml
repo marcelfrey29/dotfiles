@@ -41,6 +41,12 @@ disabled = true
 [package]
 display_private = true
 
+[aws]
+symbol = '☁️  '
+
+[nodejs]
+symbol = '🅽  '
+
 [docker_context]
 style = "bold 039" # Blue
 
@@ -53,4 +59,4 @@ style = "bold 105"
 style = "bold 216"
 
 [golang]
-symbol = "🏎  "
+symbol = "🚀 "
