@@ -24,6 +24,7 @@ declare homebrew_formulae_list=(
     # Productivity
     # "pandoc"
     # Developer Tools
+    "awscli"
     "starship"
     "fzf" # Command-line fuzzy finder
     # "nano"

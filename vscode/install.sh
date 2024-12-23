@@ -60,6 +60,8 @@ declare vscode_extension_list=(
     # "vscjava.vscode-spring-initializr"
     # Python
     # "ms-python.python"
+    # AWS
+    "amazonwebservices.aws-toolkit-vscode"
     # Infrastructure as Code
     "redhat.ansible"
     "hashicorp.terraform"
