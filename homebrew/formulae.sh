@@ -25,6 +25,7 @@ declare homebrew_formulae_list=(
     # "pandoc"
     # Developer Tools
     "awscli"
+    "act" # Run GitHub Actions locally
     "starship"
     "fzf" # Command-line fuzzy finder
     # "nano"
