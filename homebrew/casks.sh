@@ -37,6 +37,7 @@ declare homebrew_cask_list=(
     # "jetbrains-toolbox"
     # "teamviewer"
     # "virtualbox" # Incompatible with Apple Silicon
+    "utm"
     # "vagrant"
     "docker"
     "drawio"
