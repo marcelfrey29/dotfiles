@@ -1,0 +1,105 @@
+{
+    // VS Code Snippets - TypeScript
+    // Docs: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+    //
+    // - `$0`: Final cursor position
+    // - `$1`: Cursor position 1 -> 2 -> 3
+    // - `${1:name}`: Cursor position with name 1 -> 2 -> 3
+    // - `${1|a,b,c|}`: Cursor position choises (`${1| ,b,c|}` to include empty value)
+    //
+    // - `\t`: Tab / Indent
+    "TypeScript Class": {
+        "scope": "javascript,typescript",
+        "prefix": "class",
+        "body": [
+            "/*",
+            " * ${6:Description}",
+            " */",
+            "${1| ,export|} class ${2:ClassName} ${3:/* Extends & Implements */} {",
+            "\tconstructor(${4:/* Parameters */}) { ${6:/* Constructor Logic */} } $0",
+            "}"
+        ],
+        "description": "Create a TypeScript Class."
+    },
+    "TypeScript Interface": {
+        "scope": "javascript,typescript",
+        "prefix": "interface",
+        "body": [
+            "/*",
+            " * ${4:Description}",
+            " */",
+            "${1| ,export|} interface ${2:InterfaceName} ${3:/* Extends */} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create a TypeScript Class."
+    },
+    "TypeScript Function": {
+        "scope": "javascript,typescript",
+        "prefix": "pfunc",
+        "body": [
+            "/*",
+            " * ${5:Description}",
+            " */",
+            "${1| ,export|} function ${2:functionName}(${3:/* Parameters */}) ${4:/* : Return */} {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "TypeScript Method": {
+        "scope": "javascript,typescript",
+        "prefix": "func",
+        "body": [
+            "/*",
+            " * ${6:Description}",
+            " */",
+            "${1| ,public,protected,private|} ${2| ,async|} ${3:functionName}(${4:/* Parameters */}) ${5:/* : Return */} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create a Function outside a Class."
+    },
+    "TypeScript for..of": {
+        "scope": "javascript,typescript",
+        "prefix": "forof",
+        "body": [
+            "for (const ${1:variable} of ${2:list}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Iterate over a list of elemenets with for..of."
+    },
+    "TypeScript for..each": {
+        "scope": "javascript,typescript",
+        "prefix": "forin",
+        "body": [
+            "for (const ${1:variable} in ${2:list}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Iterate over a list of elemenets with for..in."
+    },
+    "TypeScript for..of with in": {
+        "scope": "javascript,typescript",
+        "prefix": "forofin",
+        "body": [
+            "for (const ${1:variable}Key in ${2:list}) {",
+            "\tconst ${1:variable} = ${2}[${1:variable}]",
+            "\t$0",
+            "}"
+        ],
+        "description": "Iterate over a list of elemenets with for..in to simulate for..of."
+    },
+    "Try-Catch": {
+        "scope": "javascript,typescript",
+        "prefix": "tc",
+        "body": [
+            "try {",
+            "\t$1",
+            "} catch (e) {",
+            "\t$0",
+            "}",
+        ],
+        "description": "Iterate over a list of elemenets with for..in to simulate for..of."
+    },
+}

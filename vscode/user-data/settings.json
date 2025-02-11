@@ -225,6 +225,7 @@
         "comments": false,
         "strings": false
     },
+    "editor.snippetSuggestions": "top",
     "editor.quickSuggestionsDelay": 100,
     "editor.multiDocumentOccurrencesHighlight": true,
     "editor.tokenColorCustomizations": {
