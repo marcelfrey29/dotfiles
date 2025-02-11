@@ -29,32 +29,23 @@
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.colorCustomizations": {
         "[GitHub Dark Dimmed]": {
-            // Disable focus borders
             "focusBorder": "#00000000",
-            // Disable Borders
             "titleBar.border": "#00000000",
             "activityBar.border": "#00000000",
             "editorWidget.border": "#00000000",
-            // Activity Bar
             "activityBarBadge.background": "#f69d50",
             "activityBarBadge.foreground": "#000000",
-            // Scrollbar
             "scrollbarSlider.background": "#ADBAC725",
-            // Editor
             "editorCursor.foreground": "#6cb6ff",
             "editorLineNumber.activeForeground": "#6cb6ff",
             "editor.foldBackground": "#10151C",
             "editor.lineHighlightBackground": "#30353C",
-            // Editor Gutter
             "editorGutter.addedBackground": "#6BC46DBF",
             "editorGutter.modifiedBackground": "#6cb6ff",
             "editorGutter.deletedBackground": "#F47067",
-            // Panel
             "badge.background": "#f69d50",
             "badge.foreground": "#000000",
-            // Git
             "gitDecoration.modifiedResourceForeground": "#6cb6ff",
-            // Icons
             "icon.foreground": "#ADBAC7",
             "symbolIcon.keywordForeground": "#F47067",
             "symbolIcon.methodForeground": "#6CB6FF",
@@ -76,7 +67,6 @@
             "symbolIcon.numberForeground": "#dcbdfb",
             "symbolIcon.stringForeground": "#6bc46d",
             "symbolIcon.textForeground": "#6bc46d",
-            // UI
             "button.background": "#6CB6FF",
             "button.hoverBackground": "#4C96FF"
         },
@@ -127,12 +117,18 @@
             "panelSectionHeader.border": "#0969da",
             "terminal.tab.activeBorder": "#0969da",
             "panelSectionHeader.foreground": "#0969da"
-        }
+        },
+        "statusBar.background": "#00000000",
+        "statusBar.noFolderBackground": "#00000000",
+        "statusBar.debuggingBackground": "#00000000",
+        "statusBar.foreground": "#6bc46d",
+        "statusBar.debuggingForeground": "#6bc46d"
     },
     // Explorer
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.openEditors.visible": 0,
+    "explorer.openEditors.visible": 1,
+    "explorer.confirmPasteNative": false,
     // Outline
     "outline.showVariables": false,
     "outline.showProperties": true,
@@ -184,7 +180,6 @@
     "editor.codeLensFontSize": 12,
     "editor.inlayHints.enabled": "on",
     "editor.wordWrap": "off",
-    "editor.lightbulb.enabled": true,
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.hover.enabled": true,
@@ -217,9 +212,9 @@
     "editor.stablePeek": false,
     "editor.stickyScroll.enabled": false,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
-    "editor.wordBasedSuggestions": true,
+    "editor.wordBasedSuggestions": "matchingDocuments",
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
