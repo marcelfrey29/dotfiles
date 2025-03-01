@@ -23,6 +23,7 @@ function brew_cask_install() {
 declare homebrew_cask_list=(
     # Productivity
     "standard-notes"
+    "obsidian"
     "firefox"
     "google-chrome"
     # "homebrew/cask-versions/google-chrome-dev"
