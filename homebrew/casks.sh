@@ -46,6 +46,8 @@ declare homebrew_cask_list=(
     "cryptomator"
     "macfuse" # For Cryptomator File System Integration
     "keepassxc"
+    # AI
+    "ollama"
     # Entertainment
     "vlc"
     "spotify"

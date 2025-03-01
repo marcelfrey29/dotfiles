@@ -4,6 +4,7 @@
     "redhat.telemetry.enabled": false,
     "workbench.enableExperiments": false,
     "aws.telemetry": false,
+    "continue.telemetryEnabled": false,
     // Window
     "window.commandCenter": true,
     // Activity Bar

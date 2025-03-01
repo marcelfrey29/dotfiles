@@ -76,6 +76,8 @@ declare vscode_extension_list=(
     "bierner.markdown-checkbox"
     "bierner.markdown-yaml-preamble"
     "bierner.markdown-footnotes"
+    # AI
+    "Continue.continue"
     # Other
     "redhat.vscode-xml"
     "redhat.vscode-yaml"
