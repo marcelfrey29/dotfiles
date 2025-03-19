@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Ensure we run on macOS
 if [ $(uname) != "Darwin" ]
@@ -55,7 +55,7 @@ then
 
     echo "[INFO] Creating SSH file..."
     diskutil mountDisk /dev/$diskName
-    cd /Volumes/boot/
+    cd /Volumes/bootfs/
     touch ssh
     echo "[INFO] SSH file created."
 
