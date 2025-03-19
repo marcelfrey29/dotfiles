@@ -7,6 +7,14 @@ then
     exit 1;
 fi
 
+# Make sure Raspberry Pi OS Image exists, otherwise download the latest version
+if [ ! -f "RaspberryPiOS.img" ]; then
+    echo "[INFO] Raspberry Pi OS Image isn't availble, downloading..."
+    curl -L --progress-bar -o RaspberryPiOS.img.xz https://downloads.raspberrypi.com/raspios_lite_arm64_latest 
+    unxz RaspberryPiOS.img.xz
+    echo "[INFO] Downloaded Raspberry Pi OS."
+fi
+
 # Print Disk info
 echo "[INFO] Select the disk you want to install RaspberryPiOS..."
 echo "[INFO] Only type the name of the disk, e.g. 'disk2'"
