@@ -59,6 +59,13 @@ then
     touch ssh
     echo "[INFO] SSH file created."
 
+    # Create Userconfig with Username+Password (`username:encrypted_pw`) for headless access
+    echo "[INFO] Configure User..."
+    read -p "Username for the Raspberry: " rpiUsername
+    read -s -p "Password for the Raspberry User '$rpiUsername': " rpiPassword
+    echo "$rpiUsername:$(echo "$rpiPassword" | openssl passwd -6 -stdin)" >> userconf.txt
+    echo "[INFO] Configured User."
+
     # Eject and finish
     echo "[INFO] Installation finished. Ejecting..."
     sudo diskutil eject /dev/r$diskName
