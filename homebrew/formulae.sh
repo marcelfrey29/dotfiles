@@ -33,6 +33,7 @@ declare homebrew_formulae_list=(
     "wget"
     "bruno"
     "ansible"
+    "ansible-lint"
     "terraform"
     # "gradle"
     # "maven"
