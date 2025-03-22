@@ -24,6 +24,7 @@ declare homebrew_formulae_list=(
     # Productivity
     # "pandoc"
     # Developer Tools
+    "helm"
     "awscli"
     "cfn-lint" # AWS CloudFormation Linter
     "act" # Run GitHub Actions locally
