@@ -36,6 +36,7 @@ declare homebrew_formulae_list=(
     "ansible"
     "ansible-lint"
     "terraform"
+    "trivy"
     # "gradle"
     # "maven"
     "bearer/tap/bearer"
