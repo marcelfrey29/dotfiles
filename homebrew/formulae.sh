@@ -26,6 +26,7 @@ declare homebrew_formulae_list=(
     # Developer Tools
     "helm"
     "awscli"
+    "gh"
     "cfn-lint" # AWS CloudFormation Linter
     "act" # Run GitHub Actions locally
     "starship"
