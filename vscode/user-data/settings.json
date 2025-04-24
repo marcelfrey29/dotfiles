@@ -5,6 +5,9 @@
     "workbench.enableExperiments": false,
     "aws.telemetry": false,
     "continue.telemetryEnabled": false,
+    "sonarlint.disableTelemetry": true,
+    "telemetry.feedback.enabled": false,
+    "docker.lsp.telemetry": "off",
     // Window
     "window.commandCenter": true,
     "window.autoDetectColorScheme": true,
@@ -440,4 +443,9 @@
         "#8250df",
         "#f6f8fa"
     ],
+    // GitHub Copilot
+    "github.copilot.enable": {
+        "markdown": false,
+        "md": false,
+    }
 }

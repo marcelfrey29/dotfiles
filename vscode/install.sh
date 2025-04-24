@@ -77,6 +77,7 @@ declare vscode_extension_list=(
     "bierner.markdown-yaml-preamble"
     "bierner.markdown-footnotes"
     # AI
+    "github.copilot"
     "Continue.continue"
     # Other
     "redhat.vscode-xml"
