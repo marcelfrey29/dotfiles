@@ -297,6 +297,7 @@
     "terminal.integrated.fontLigatures": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.suggest.enabled": true,
     // Extensions
     "extensions.ignoreRecommendations": true,
     // Language - Go
