@@ -37,6 +37,7 @@ declare homebrew_formulae_list=(
     "ansible"
     "ansible-lint"
     "terraform"
+    "argocd"
     "trivy"
     # "gradle"
     # "maven"
