@@ -100,18 +100,6 @@
     // Navigation - Tool Windows
     // =========================
     {
-        // macOS: 0 - Focus SCM
-        "key": "cmd+0",
-        "command": "workbench.scm.focus",
-        "when": "isMac"
-    },
-    {
-        // Windows: 0 - Focus SCM
-        "key": "alt+0",
-        "command": "workbench.scm.focus",
-        "when": "!isMac"
-    },
-    {
         // macOS: 1 - Focus Explorer
         "key": "cmd+1",
         "command": "workbench.explorer.fileView.focus",
@@ -124,51 +112,51 @@
         "when": "!isMac"
     },
     {
-        // macOS: 2 - Focus Explorer
+        // macOS: 2 - Focus SCM
         "key": "cmd+2",
-        "command": "todo-tree-view.focus",
+        "command": "workbench.scm.focus",
         "when": "isMac"
     },
     {
-        // Windows: 2 - Focus Explorer
+        // Windows: 2 - Focus SCM
         "key": "alt+2",
-        "command": "todo-tree-view.focus",
+        "command": "workbench.scm.focus",
         "when": "!isMac"
     },
     {
-        // macOS: 3 - Focus Problem View
+        // macOS: 3 - Run&Debug View
         "key": "cmd+3",
-        "command": "workbench.actions.view.problems",
+        "command": "workbench.view.debug",
         "when": "isMac"
     },
     {
-        // Windows: 3 - Focus Problem View
+        // Windows: 3 - Run&Debug View
         "key": "alt+3",
+        "command": "workbench.view.debug",
+        "when": "!isMac"
+    },
+    {
+        // macOS: 4 - Focus Problem View
+        "key": "cmd+4",
+        "command": "workbench.actions.view.problems",
+        "when": "isMac"
+    },
+    {
+        // Windows: 4 - Focus Problem View
+        "key": "alt+4",
         "command": "workbench.actions.view.problems",
         "when": "!isMac"
     },
     {
-        // macOS: 5 - Run&Debug View
-        "key": "cmd+5",
-        "command": "workbench.view.debug",
-        "when": "isMac"
-    },
-    {
-        // Windows: 5 - Run&Debug View
-        "key": "alt+5",
-        "command": "workbench.view.debug",
-        "when": "!isMac"
-    },
-    {
-        // macOS: 6 - Output View
+        // macOS: 6 - Debug Console
         "key": "cmd+6",
-        "command": "workbench.panel.output.focus",
+        "command": "workbench.debug.action.toggleRepl",
         "when": "isMac"
     },
     {
-        // Windows: 6 - Output
+        // Windows: 6 - Debug Console
         "key": "alt+6",
-        "command": "workbench.panel.output.focus",
+        "command": "workbench.debug.action.toggleRepl",
         "when": "!isMac"
     },
     {
@@ -196,7 +184,6 @@
         "when": "!isMac"
     },
     {
-        // macOS: 9 - Documentation View
         "key": "cmd+9",
         "command": "docsView.documentation.focus",
         "when": "isMac"
@@ -206,6 +193,30 @@
         "key": "alt+9",
         "command": "docsView.documentation.focus",
         "when": "!isMac"
+    },
+    {
+        // macOS: 9 - Copilot Chat
+        "key": "cmd+9",
+        "command": "workbench.action.chat.open",
+        "when": "!chatSetupHidden"
+    },
+    {
+        // Windows: 9 - Copilot Chat
+        "key": "alt+9",
+        "command": "workbench.action.chat.open",
+        "when": "!chatSetupHidden && !isMac"
+    },
+    {
+        // macOS: 9 - Copilot Chat
+        "key": "cmd+9",
+        "command": "workbench.panel.chat",
+        "when": "workbench.panel.chat.view.copilot.active"
+    },
+    {
+        // Windows: 9 - Copilot Chat
+        "key": "cmd+9",
+        "command": "workbench.panel.chat",
+        "when": "workbench.panel.chat.view.copilot.active && !isMac"
     },
     // =========================
     // Navigation - Terminal
