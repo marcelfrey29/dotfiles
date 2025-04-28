@@ -33,11 +33,10 @@ declare vscode_extension_list=(
     "vscodevim.vim"
     "GitHub.github-vscode-theme"
     "miguelsolorio.symbols"
-    "bierner.docs-view"
     "Gruntfuggly.todo-tree"
     "EditorConfig.EditorConfig"
     # JavaScript / TypeScript
-    "Vue.volar"
+    # "Vue.volar"
     "biomejs.biome"
     "bradlc.vscode-tailwindcss"
     # Go
@@ -62,6 +61,7 @@ declare vscode_extension_list=(
     # "ms-python.python"
     # AWS
     "amazonwebservices.aws-toolkit-vscode"
+    "sebastianbille.iam-legend"
     # Infrastructure as Code
     "redhat.ansible"
     "hashicorp.terraform"
@@ -70,6 +70,8 @@ declare vscode_extension_list=(
     "ms-kubernetes-tools.vscode-kubernetes-tools"
     # APIs
     "42Crunch.vscode-openapi"
+    # CI
+    "github.vscode-github-actions"
     # Markdown
     "bierner.markdown-mermaid"
     "bierner.markdown-emoji"
@@ -82,6 +84,7 @@ declare vscode_extension_list=(
     # Other
     "redhat.vscode-xml"
     "redhat.vscode-yaml"
+    "connor4312.esbuild-problem-matchers" # Required for VS Code Extension Development with esbuild
 )
 
 vscode_install_extensions "${vscode_extension_list[@]}"
