@@ -33,6 +33,8 @@ declare homebrew_formulae_list=(
     "fzf" # Command-line fuzzy finder
     # "nano"
     "wget"
+    "jq"
+    "yq"
     "bruno"
     "ansible"
     "ansible-lint"
