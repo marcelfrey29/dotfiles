@@ -25,6 +25,10 @@
     "workbench.colorTheme": "GitHub Light",
     "workbench.iconTheme": "symbols",
     "workbench.panel.showLabels": false,
+    "workbench.editorAssociations": {
+        "*.md": "default",
+        "*.runme.md": "runme"
+    },
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.splitInGroupLayout": "vertical",
@@ -350,8 +354,9 @@
         "editor.wordWrap": "off" // Explicitly required...
     },
     // Icon Theme - Symbols
-    "symbols.files.associations": {},
-    "symbols.folders.associations": {},
+    "symbols.files.associations": {
+        "*.runme.md": "notebook"
+    },
     "symbols.hidesExplorerArrows": false,
     // Todo-Tree
     "todo-tree.general.showActivityBarBadge": true,

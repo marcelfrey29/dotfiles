@@ -78,6 +78,7 @@ declare vscode_extension_list=(
     "bierner.markdown-checkbox"
     "bierner.markdown-yaml-preamble"
     "bierner.markdown-footnotes"
+    "stateful.runme"
     # AI
     "github.copilot"
     "Continue.continue"
