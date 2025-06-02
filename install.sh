@@ -7,6 +7,7 @@ echo "Running installation scripts..."
 (cd ./homebrew ; ./install.sh) # otherwise the formulae and cask scripts are not found 
 ./macos/install.sh
 ./nodejs/install.sh
+(cd ./ollama ; ./install.sh)
 ./rust/install.sh
 (cd ./vscode ; ./install.sh)
 
