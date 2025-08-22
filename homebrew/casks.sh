@@ -22,9 +22,10 @@ function brew_cask_install() {
 # Cask List
 declare homebrew_cask_list=(
     # Productivity
-    "standard-notes"
+    # "standard-notes"
     "obsidian"
     "firefox"
+    "firefox@developer-edition"
     "google-chrome"
     # "homebrew/cask-versions/google-chrome-dev"
     "microsoft-word"
@@ -38,14 +39,16 @@ declare homebrew_cask_list=(
     # "jetbrains-toolbox"
     # "teamviewer"
     # "virtualbox" # Incompatible with Apple Silicon
-    "utm"
+    # "utm"
     # "vagrant"
+    "container"
     "docker"
     "drawio"
     # Security
     "cryptomator"
     "macfuse" # For Cryptomator File System Integration
     "keepassxc"
+    "burp-suite"
     # AI
     "ollama"
     # Entertainment
@@ -53,10 +56,9 @@ declare homebrew_cask_list=(
     "spotify"
     # Social Media
     # "webex-meetings"
-    "zoom"
+    # "zoom"
     "microsoft-teams"
     "discord"
-    "gotomeeting"
     # Other
     "ledger-live"
     # Fonts

@@ -38,6 +38,7 @@ declare homebrew_formulae_list=(
     "bruno"
     "ansible"
     "ansible-lint"
+    "kube-linter" # K8s Linter
     "terraform"
     "argocd"
     "trivy"
