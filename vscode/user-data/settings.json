@@ -25,10 +25,6 @@
     "workbench.colorTheme": "GitHub Light",
     "workbench.iconTheme": "symbols",
     "workbench.panel.showLabels": false,
-    "workbench.editorAssociations": {
-        "*.md": "default",
-        "*.runme.md": "runme"
-    },
     "workbench.editor.closeOnFileDelete": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.splitInGroupLayout": "vertical",
@@ -36,6 +32,10 @@
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 8,
     "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editorAssociations": {
+        "*.md": "default", // Prevent that all Markdown files are opened with Runme
+        "*.runme.md": "runme"
+    },
     "workbench.colorCustomizations": {
         "statusBar.background": "#00000000",
         "statusBar.noFolderBackground": "#00000000",
@@ -198,10 +198,11 @@
     },
     "git.confirmSync": false,
     "diffEditor.codeLens": true,
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.experimental.showMoves": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "git.replaceTagsWhenPull": true,
     // Editor
     "editor.tabSize": 4,
     "editor.tabCompletion": "off",
@@ -349,6 +350,7 @@
     "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
     // Language - TypeScript
     "typescript.implementationsCodeLens.enabled": true,
+    "typescript.experimental.expandableHover": true,
     "typescript.inlayHints.enumMemberValues.enabled": true,
     "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
     "typescript.inlayHints.parameterNames.enabled": "all",
@@ -368,9 +370,8 @@
         "editor.wordWrap": "off" // Explicitly required...
     },
     // Icon Theme - Symbols
-    "symbols.files.associations": {
-        "*.runme.md": "notebook"
-    },
+    "symbols.files.associations": {},
+    "symbols.folders.associations": {},
     "symbols.hidesExplorerArrows": false,
     // Todo-Tree
     "todo-tree.general.showActivityBarBadge": true,
