@@ -160,8 +160,22 @@
     },
     // Search
     "search.showLineNumbers": true,
-    // AI / Chat / Copilot
+    // Generative AI: GitHub Copilot & Ollama+Continue
     "chat.commandCenter.enabled": false,
+    "github.copilot.advanced": {
+        "authPermissions": "minimal"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "scminput": false,
+        "markdown": false,
+        "md": false,
+    },
+    // Tab-Autocompletion is very slow with Ollama causes a massive delay when typing characters.
+    // This is also the case when Ollama is not even running.
+    // For these reasons, it's disabled. 
+    "continue.enableTabAutocomplete": false,
     // Zen Mode
     "zenMode.hideLineNumbers": false,
     // Files
@@ -238,7 +252,7 @@
         "comments": false,
         "strings": false
     },
-    "editor.snippetSuggestions": "top",
+    "editor.snippetSuggestions": "bottom",
     "editor.quickSuggestionsDelay": 100,
     "editor.multiDocumentOccurrencesHighlight": true,
     "editor.tokenColorCustomizations": {
@@ -448,9 +462,4 @@
         "#8250df",
         "#f6f8fa"
     ],
-    // GitHub Copilot
-    "github.copilot.enable": {
-        "markdown": false,
-        "md": false,
-    }
 }

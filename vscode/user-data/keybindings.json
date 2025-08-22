@@ -184,17 +184,6 @@
         "when": "!isMac"
     },
     {
-        "key": "cmd+9",
-        "command": "docsView.documentation.focus",
-        "when": "isMac"
-    },
-    {
-        // Windows: 9 - Documentation View
-        "key": "alt+9",
-        "command": "docsView.documentation.focus",
-        "when": "!isMac"
-    },
-    {
         // macOS: 9 - Copilot Chat
         "key": "cmd+9",
         "command": "workbench.action.chat.open",
@@ -214,9 +203,27 @@
     },
     {
         // Windows: 9 - Copilot Chat
-        "key": "cmd+9",
+        "key": "alt+9",
         "command": "workbench.panel.chat",
         "when": "workbench.panel.chat.view.copilot.active && !isMac"
+    },
+    {
+        // macOS: 9 - Copilot Chat
+        "key": "cmd+shift+9",
+        "command": "inlineChat.start",
+        "when": "workbench.panel.chat.view.copilot.active"
+    },
+    {
+        // macOS: Shift+9 - Copilot Inline Chat
+        "key": "cmd+shift+9",
+        "command": "inlineChat.start",
+        "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
+    },
+    {
+        // Windows: Shift+9 - Copilot Inline Chat
+        "key": "alt+shift+9",
+        "command": "inlineChat.start",
+        "when": "!isMac && editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasProvider && inlineChatPossible && !editorReadonly && !editorSimpleInput"
     },
     // =========================
     // Navigation - Terminal
@@ -396,7 +403,7 @@
         // Quick-Fix
         "key": "alt+enter",
         "command": "editor.action.quickFix",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+        "when": "editorHasCodeActionsProvider && editorTextFocus"
     },
     // =========================
     // Editing - Code
@@ -442,9 +449,8 @@
     // =========================
     {
         // Refactor
-        "key": "alt+r",
+        "key": "alt+shift+enter",
         "command": "editor.action.refactor",
-        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
     {
         // Rename Symbol
@@ -559,6 +565,18 @@
         "key": "ctrl+r",
         "command": "editor.action.startFindReplaceAction",
         "when": "!isMac && editorFocus || editorIsOpen"
+    },
+    {
+        // macOS: Gloabl Replace
+        "key": "shift+cmd+r",
+        "command": "workbench.action.replaceInFiles",
+        "when": "isMac"
+    },
+    {
+        // Windows: Gloabl Replace
+        "key": "shift+alt+r",
+        "command": "workbench.action.replaceInFiles",
+        "when": "!isMac"
     },
     {
         // macOS: In List Search
@@ -795,5 +813,9 @@
     {
         "key": "alt+9",
         "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "-workbench.action.replaceInFiles"
     }
 ]
