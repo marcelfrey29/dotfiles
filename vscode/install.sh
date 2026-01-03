@@ -49,16 +49,16 @@ declare vscode_extension_list=(
     # Required for Rust Debugging
     # "ms-vscode.cpptools"
     # Java
-    # "redhat.java"
-    # "mathiasfrohlich.kotlin"
-    # "vscjava.vscode-maven"
-    # "vscjava.vscode-gradle"
-    # "vscjava.vscode-java-test"
-    # "vscjava.vscode-java-debug"
-    # "vscjava.vscode-java-dependency"
-    # "Pivotal.vscode-spring-boot"
-    # "vscjava.vscode-spring-boot-dashboard"
-    # "vscjava.vscode-spring-initializr"
+    "redhat.java"
+    # "mathiasfrohlich.kotlin" # Future: Check https://github.com/Kotlin/kotlin-lsp 
+    "vscjava.vscode-maven"
+    "vscjava.vscode-gradle"
+    "vscjava.vscode-java-test"
+    "vscjava.vscode-java-debug"
+    "vscjava.vscode-java-dependency"
+    "vmware.vscode-spring-boot"
+    "vscjava.vscode-spring-boot-dashboard"
+    "vscjava.vscode-spring-initializr"
     # Python
     # "ms-python.python"
     # AWS

@@ -59,8 +59,6 @@ declare homebrew_cask_list=(
     # "zoom"
     "microsoft-teams"
     "discord"
-    # Other
-    "ledger-live"
     # Fonts
     "font-jetbrains-mono"
     "font-fira-code"

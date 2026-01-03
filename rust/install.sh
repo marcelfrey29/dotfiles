@@ -18,5 +18,6 @@ rustup update stable
 # Compilation targets
 echo "Adding compilation targets..."
 rustup target add wasm32-unknown-unknown # Rust to WASM
+rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-ios-sim # iOS
 
 echo "Rust is ready to use."

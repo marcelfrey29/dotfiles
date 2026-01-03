@@ -3,6 +3,7 @@
 # Reference: 
 # - https://macos-defaults.com/
 # - https://github.com/herrbischoff/awesome-macos-command-line
+# - https://github.com/kevinSuttle/macOS-Defaults
 
 echo "Seeting macOS Defaults..."
 
