@@ -34,4 +34,5 @@ lerna-debug.log*
 /coverage
 
 # Operating System Images
+*.img.xz
 *.img
