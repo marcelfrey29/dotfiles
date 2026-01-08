@@ -1,19 +1,52 @@
 # Dotfiles
 
-## Important Notes
+> [!CAUTION]
+> Installing the dotfiles will **override** certain files in your file system, for example in your home directory or your VS Code configuration.\
+> **As with every script, make sure you understand the impact before executing it.**
 
-- The scripts copy and **override** data in your home directory! Before running the scripts, make sure you understand what they are doing!
-- You can run the installation scripts as often as you want, but only _additions_ are applied 
-    - Currently, if packages are removed from the list in the script, they stay installed - even after running the install script - newly added packages are installed though
+> [!IMPORTANT]
+> Currently all scripts only make sure that the packages that are defined in the list are installed.
+> The package list **does not represent the target state** which means that installed packages that are no longer of the list are **not** removed.\
+> If you want to remove a package that was removed from the list, uninstall it manually.  
+
+## Tenets
+
+- Support for macOS, Linux, and VS Code Dev Containers
+    - Work seamlessly across different operating systems and projects
+    - Dev Containers must work out of the box (_see security_)
+- Security as job zero
+    - Force and prefer Dev Containers: Don't install programming languages, runtimes, and tools on the main OS
+        - Limit the impact of Supply Chain Attacks against OSS dependencies (e.g. malware, credential theft)
+        - Limit the radius of AI Agents / Autonomuous Systems (e.g. prevent out-of-project files access, limit impact of prompt injections to project / dev container)
+- Idempotency
+    - It's possible to run the dotfiles installation scripts as often as needed
+
+## Installation
+
+To install the dotfiles, simply run the install script.
+
+> [!NOTE]
+> To install the dotfiles on your main OS, you must run the `./install.sh` script from outside the Dev Container.
+
+```bash
+./install.sh
+```
+
+VS Code Dev Containers support Dotfiles out of the box. 
+Simply add the following configuration to your VS Code Settings.
+With this settings applied, VS Code will automatically clone the dotfiles repository into the Dev Container and run the install script.
+
+```json
+{
+    "dotfiles.repository": "https://github.com/marcelfrey29/dotfiles",
+    "dotfiles.targetPath": "~/.dotfiles",
+}
+```
 
 ## Requirements
 
 - XCode Command Line Tools must be installed (`xcode-select --install`) 
 - Git must be configured
-
-## Setup
-
-- Run the `install.sh` script
 
 ## Post-Setup
 
