@@ -1,7 +1,7 @@
 # Dotfiles
 
 > [!CAUTION]
-> Installing the dotfiles will **override** certain files in your file system, for example in your home directory or your VS Code configuration.\
+> Installing the dotfiles will **override** some system configurations and certain files in your file system, for example in your home directory or your VS Code configuration.\
 > **As with every script, make sure you understand the impact before executing it.**
 
 > [!IMPORTANT]
@@ -26,10 +26,14 @@
 To install the dotfiles, simply run the install script.
 
 > [!NOTE]
-> To install the dotfiles on your main OS, you must run the `./install.sh` script from outside the Dev Container.
+> To install the dotfiles on your main OS, you must run the `./install.sh [--full-os]` script from outside the Dev Container.
 
 ```bash
+# Terminal Config & Base Packages
 ./install.sh
+
+# Full System and Application Configuration
+./install.sh --full-os
 ```
 
 VS Code Dev Containers support Dotfiles out of the box. 
