@@ -30,15 +30,15 @@ OS="$(uname -s)"
 case "$OS" in
     Darwin)
         echo "Detected macOS, running macOS installation scripts..."
+        # Homebrew
+        (cd ./homebrew ; ./install.sh)
         
-        # macOS System Config
+        # macOS System Config (depends on Homebrew)
         if [ "$FULL_OS" = true ]; then
             echo "Running full OS setup for macOS..."
             (cd ./macOS ; ./install.sh)
+            (cd ./macOS ; ./appstore.sh)
         fi
-
-        # Homebrew
-        (cd ./homebrew ; ./install.sh)
         ;;
     Linux)
         echo "Detected Linux, running Linux installation scripts..."

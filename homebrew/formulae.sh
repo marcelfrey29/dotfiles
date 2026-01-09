@@ -26,6 +26,7 @@ declare homebrew_formulae_list=(
     # Terminal
     "starship"
     "fzf"
+    "mas" # Mac App Store CLI
     # Core Utils
     "wget"
     # "nano"
