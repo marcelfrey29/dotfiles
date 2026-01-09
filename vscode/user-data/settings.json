@@ -321,7 +321,8 @@
     "terminal.integrated.fontLigatures": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.scrollback": 100000,
-    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.suggest.enabled": false,
+    "terminal.integrated.defaultProfile.linux": "zsh",
     // Extensions
     "extensions.ignoreRecommendations": true,
     // Language - Go
