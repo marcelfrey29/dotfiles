@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # List all available TimeMachine backups of a disk.
 # 

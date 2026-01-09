@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # Example:
 # ./init_backup_directory.sh /Volumes/Backup-04

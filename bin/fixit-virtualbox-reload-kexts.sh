@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # Fix VirtualBox on macOS Monterey.
 echo "Fixing VirtualBox on macOS Monterey after a reboot."

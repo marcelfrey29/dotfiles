@@ -1,4 +1,4 @@
-#/bin/zsh
+#!/usr/bin/env bash
 
 # Config: Select Models
 EMBEDDINGS_MODEL="nomic-embed-text"

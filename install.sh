@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # This is the central installation script for the dotfiles.
 # By default, this script will only setup the core dotfiles configuration, but not the full main OS environment.
@@ -77,6 +77,12 @@ if [ "$FULL_OS" = true ]; then
 fi
 
 # Reload terminal config
-source ~/.zshrc
+if [ -n "$ZSH_VERSION" ]; then
+    # Running in zsh
+    [ -f ~/.zshrc ] && source ~/.zshrc
+elif [ -n "$BASH_VERSION" ]; then
+    # Running in bash
+    [ -f ~/.bashrc ] && source ~/.bashrc
+fi
 
 echo "Dotfiles setup complete."
