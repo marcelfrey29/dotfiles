@@ -6,7 +6,7 @@
 declare packageList=(
     # Terminal
     "zsh" 
-    "starship"
+    # "starship" # Not always available via APT, will be installed manually below
     "fzf"
     # Core Utils
     "git"
@@ -41,3 +41,6 @@ installFromList "${packageList[@]}"
 # Use zsh as the default shell
 chsh -s /bin/zsh
 echo "Changed default shell to zsh."
+
+# Install Starship because it's not always available via APT (e.g. Debian <= 12)
+curl -sS https://starship.rs/install.sh | sh -s -- -y
