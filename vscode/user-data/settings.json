@@ -11,6 +11,7 @@
     // Window
     "window.commandCenter": true,
     "window.autoDetectColorScheme": true,
+    "window.title": "${activeRepositoryName}/${activeRepositoryBranchName}${separator}${profileName}${separator}${activeEditorShort}${separator}${focusedView}",
     // Activity Bar
     "workbench.activityBar.location": "top",
     // Workbench
@@ -313,6 +314,7 @@
     "debug.toolBarLocation": "commandCenter",
     "debug.allowBreakpointsEverywhere": true,
     // Terminal
+    "terminal.integrated.tabs.title": "${process}${separator}${shellType}",
     "terminal.integrated.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Consolas, 'Apple Color Emoji'",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorStyle": "line",
@@ -463,4 +465,10 @@
         "#8250df",
         "#f6f8fa"
     ],
+    // Dev Containers
+    "dotfiles.targetPath": "~/.dotfiles",
+    "dotfiles.repository": "https://github.com/marcelfrey29/dotfiles",
+    "dev.containers.gitCredentialHelperConfigLocation": "global",
+    "dev.containers.defaultExtensions": [],
+    "dev.containers.experimentalAppleContainerSupport": false,
 }
