@@ -37,3 +37,7 @@ function installFromList() {
 }
 
 installFromList "${packageList[@]}"
+
+# Use zsh as the default shell
+chsh -s /bin/zsh
+echo "Changed default shell to zsh."
