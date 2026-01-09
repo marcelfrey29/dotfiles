@@ -35,6 +35,7 @@ declare vscode_extension_list=(
     "miguelsolorio.symbols"
     "Gruntfuggly.todo-tree"
     "EditorConfig.EditorConfig"
+    "ms-vscode-remote.remote-containers"
     # JavaScript / TypeScript
     # "Vue.volar"
     "biomejs.biome"
