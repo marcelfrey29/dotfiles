@@ -467,7 +467,7 @@
     ],
     // Dev Containers
     "dotfiles.targetPath": "~/.dotfiles",
-    "dotfiles.repository": "https://github.com/marcelfrey29/dotfiles",
+    "dotfiles.repository": "marcelfrey29/dotfiles",
     "dev.containers.gitCredentialHelperConfigLocation": "global",
     "dev.containers.defaultExtensions": [],
     "dev.containers.experimentalAppleContainerSupport": false,
