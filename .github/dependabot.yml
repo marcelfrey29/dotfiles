@@ -1,5 +1,6 @@
 version: 2
 updates:
+  # Devcontainer Configuration Updates
   - package-ecosystem: "devcontainers"
     directory: "/"
     schedule:
@@ -11,3 +12,17 @@ updates:
     labels:
       - "area: devcontainers"
       - "area: dependencies"
+
+  # Docker Devcontainer Updates
+  - package-ecosystem: "docker"
+    directory: "/.devcontainer"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+    labels:
+      - "area: dependencies"
+      - "area: devcontainers"
+      - "area: docker"
