@@ -1,5 +1,15 @@
 # General
 alias ..="cd .."
+alias ls="ls --color"
+alias ll="ls -la --color"
+
+# Git
+alias gco="git checkout"
+alias gb="git branch -b"
+alias gf="git fetch"
+alias gu="git fetch && git pull"
+alias gp="git push"
+alias gcp="git cherry-pick"
 
 # Terraform
 alias tf="terraform"
@@ -11,3 +21,6 @@ alias tfw="terraform workspace"
 
 # Ansible
 alias ap="ansible-playbook"
+
+# Kubernetes
+alias k="kubectl"

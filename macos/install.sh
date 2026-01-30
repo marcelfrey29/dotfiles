@@ -9,7 +9,7 @@ echo "Seeting macOS Defaults..."
 
 # Dock
 defaults write com.apple.dock orientation -string bottom; # Dock position ("left" | "bottom" | "right")
-defaults write com.apple.dock tilesize -int 40; # Icon Size
+defaults write com.apple.dock tilesize -int 36; # Icon Size
 defaults write com.apple.dock magnification -bool false; # Magnify on hover
 defaults write com.apple.dock autohide -bool false; # Auto. hide/sow dock
 defaults write com.apple.dock autohide-time-modifier -float 0.75; # Time to open/close dock when auto. hide is enabled
@@ -31,15 +31,19 @@ defaults write com.apple.menuextra.clock FlashDateSeparators -bool false; # Date
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2; # Icon size in sidebars (1, 2, 3)
 defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0" # Finder bar folder name hover delay (default = 0.5)
 defaults write -g AppleShowScrollBars -string "Always"; # Scrollbar visibility ("WhenScrolling" | "Automatic" | "Always")
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool false; # Disable auto emptying trash after 30 days
 
 # Finder - Application
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool true; # Show titlebar icons (e.g. folder icon next to name)
+defaults write com.apple.finder "FinderSpawnTab" -bool true; # Open in new tab instead of new window
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true; # Show file extensions
 defaults write com.apple.finder AppleShowAllFiles -bool false; # Show all files
 defaults write com.apple.finder ShowPathbar -bool true; # Show breadcrumbs
 defaults write com.apple.finder ShowStatusBar -bool true; # Show status bar
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"; # Use "List View" as default view
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"; # Use "List View" as default view ("icnv" | "clmv" | "glyv" | "Nlsv")
 defaults write com.apple.finder _FXSortFoldersFirst -bool true; # Keep folders on top when sorting alphabetically
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false; # No warning when changing file extensions
+defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"; # Search current folder by default ("SCcf" | "SCsp" | "SCev")
 
 # Finder - Desktop
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false; # Show internal drives on desktop
@@ -48,16 +52,23 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false; # Show 
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false; # Show network mounts on desktop
 
 # Keyboard
+# 
+# Some external keyboard have a function lock key (e.g. Fn+Esc on Logitech) which must be toggled
+# in combination with the macOS system settings, see https://superuser.com/a/1500359
+defaults write -g com.apple.keyboard.fnState -bool true # Use function keys (F1, F2, ...) as standard function keys
 defaults write NSGlobalDomain "ApplePressAndHoldEnabled" -bool false; # Disable holding a key to show an overlay with additional options (e.g. holding "a" for "ä", "â", ...)
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false; # Disable "press and hold" for VS Code Vim, so that navigation works smoothly, see https://github.com/VSCodeVim/Vim#mac 
+
+# Mouse
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false # Scrolling as it should be
 
 # Screenshot App
 defaults write com.apple.screencapture disable-shadow -bool true; # Disable shadow around the application 
 
 # Restart all services
-echo "Restarting Services..."
+echo "Restarting applications..."
 killall Dock;
 killall Finder;
-echo "Restart Done."
+echo "Restarted affected applications, some system settings may need a logout/reboot to take effect."
 
-echo "Set Defaults."
+echo "Set all macOS Defaults."

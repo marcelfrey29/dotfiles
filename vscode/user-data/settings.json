@@ -470,6 +470,21 @@
     "dotfiles.targetPath": "~/.dotfiles",
     "dotfiles.repository": "marcelfrey29/dotfiles",
     "dev.containers.gitCredentialHelperConfigLocation": "global",
-    "dev.containers.defaultExtensions": [],
+    "dev.containers.defaultExtensions": [
+        // General
+        "gruntfuggly.todo-tree",
+        "editorconfig.editorconfig",
+        // Markdown
+        "bierner.markdown-checkbox",
+        "bierner.markdown-emoji",
+        "bierner.markdown-footnotes",
+        "bierner.markdown-yaml-preamble",
+        // Copilot
+        "github.copilot",
+        "github.copilot-chat",
+        // Syntax Highlighting
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml"
+    ],
     "dev.containers.experimentalAppleContainerSupport": false,
 }

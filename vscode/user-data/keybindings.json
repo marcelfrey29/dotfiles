@@ -47,6 +47,12 @@
         "key": "cmd+k cmd+w",
         "command": "workbench.action.switchWindow"
     },
+    {
+        // Delete File or Folder with Delete Key
+        "key": "delete",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceMoveableToTrash && !inputFocus"
+    },
     // =========================
     // Navigation Core
     // =========================
@@ -95,6 +101,17 @@
         // Decrease Panel Size
         "key": "shift+alt+[Minus]",
         "command": "workbench.action.decreaseViewSize"
+    },
+    {
+        // Show list of open editors for quick swtich
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
+    },
+    {
+        // Cycle through the list of editors in the quick switcher
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
     },
     // =========================
     // Navigation - Tool Windows

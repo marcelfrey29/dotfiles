@@ -28,67 +28,19 @@ function vscode_install_extensions() {
 }
 
 # Extension List
+# This list only includes extensions that need to be installed in the VC Code Client.
+# Extensions required for all Dev Containers should be added to the
+# "dev.containers.defaultExtensions" setting.
+# Project-specific extensions should be added to the respective project.
 declare vscode_extension_list=(
     # General 
-    "vscodevim.vim"
-    "GitHub.github-vscode-theme"
+    "github.github-vscode-theme"
     "miguelsolorio.symbols"
-    "Gruntfuggly.todo-tree"
-    "EditorConfig.EditorConfig"
+    "vscodevim.vim"
     "ms-vscode-remote.remote-containers"
-    # JavaScript / TypeScript
-    # "Vue.volar"
-    "biomejs.biome"
-    "bradlc.vscode-tailwindcss"
-    # Swift
-    "swiftlang.swift-vscode"
-    # Go
-    "golang.go"
-    # Rust
-    # "rust-lang.rust-analyzer"
-    # "tamasfe.even-better-toml"
-    # Required for Rust Debugging
-    # "ms-vscode.cpptools"
-    # Java
-    "redhat.java"
-    # "mathiasfrohlich.kotlin" # Future: Check https://github.com/Kotlin/kotlin-lsp 
-    "vscjava.vscode-maven"
-    "vscjava.vscode-gradle"
-    "vscjava.vscode-java-test"
-    "vscjava.vscode-java-debug"
-    "vscjava.vscode-java-dependency"
-    "vmware.vscode-spring-boot"
-    "vscjava.vscode-spring-boot-dashboard"
-    "vscjava.vscode-spring-initializr"
-    # Python
-    # "ms-python.python"
-    # AWS
-    "amazonwebservices.aws-toolkit-vscode"
-    "sebastianbille.iam-legend"
-    # Infrastructure as Code
-    "redhat.ansible"
-    "hashicorp.terraform"
-    # Docker & K8s
-    "ms-azuretools.vscode-docker"
-    "ms-kubernetes-tools.vscode-kubernetes-tools"
-    # APIs
-    "42Crunch.vscode-openapi"
-    # CI
-    "github.vscode-github-actions"
-    # Markdown
-    "bierner.markdown-mermaid"
-    "bierner.markdown-emoji"
-    "bierner.markdown-checkbox"
-    "bierner.markdown-yaml-preamble"
-    "bierner.markdown-footnotes"
-    # "stateful.runme"
-    # AI
-    "github.copilot"
-    # "Continue.continue"
-    # Other
+    # Syntax Highlighting
     "redhat.vscode-xml"
     "redhat.vscode-yaml"
-    "connor4312.esbuild-problem-matchers" # Required for VS Code Extension Development with esbuild
 )
 
 vscode_install_extensions "${vscode_extension_list[@]}"
