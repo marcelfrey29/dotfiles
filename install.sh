@@ -24,6 +24,10 @@ done
 
 echo "Setting up Dotfiles with FULL_OS=$FULL_OS ..."
 
+# Ensure required directories exist
+mkdir -p ~/.cmd-history
+mkdir -p ~/.kube
+
 # Install OS Packages
 # Detect OS and run appropriate installation script
 OS="$(uname -s)"

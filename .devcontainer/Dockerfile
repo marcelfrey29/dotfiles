@@ -10,3 +10,6 @@ RUN apt-get update && apt-get install -y \
 
 # Use zsh as default shell
 RUN chsh -s /bin/zsh
+
+# Create necessary directories (mount points)
+RUN mkdir -p ~/.cmd-history

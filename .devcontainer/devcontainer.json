@@ -3,6 +3,10 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
+	"mounts": [
+		// Command History Persistence & Sharing
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.cmd-history,target=/root/.cmd-history,type=bind"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": []
