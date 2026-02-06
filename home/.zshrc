@@ -6,7 +6,7 @@ export STARSHIP_CONFIG=~/.starship.toml
 source ~/.aliases
 
 # Add ~/.bin to PATH
-export PATH=~/.bin:~/.bin/marcelfrey29:$PATH
+export PATH=~/.bin:~/.bin/marcelfrey29:~/.local/bin:$PATH
 
 # fzf
 source <(fzf --zsh)
