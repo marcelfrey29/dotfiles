@@ -11,8 +11,9 @@ if [[ -z "$1" ]]; then
 fi
 
 # Ask for confirmation
-read "confirmation?Initialize backup directory in '$1'? (y/n) "
-if [[ $confirmation == "y" ]]; then
+echo -n "Initialize backup directory in '$1'? (y/n) "
+read confirmation
+if [[ "$confirmation" = "y" ]]; then
     echo "Initializing Backup directory..."
 
     # Create Device Directories

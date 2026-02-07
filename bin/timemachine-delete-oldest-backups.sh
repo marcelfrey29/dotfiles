@@ -50,9 +50,10 @@ backup_timestamps_to_delete=$(tmutil listbackups -d $1 | head -n$count | xargs -
 
 echo "Following $count backups will be deleted:"
 echo $backup_timestamps_to_delete
-read "confirmation?Continue? (y/n) "
+echo -n "Continue? (y/n) "
+read confirmation
 
-if ! [[ $confirmation == "y" ]]; then
+if ! [[ "$confirmation" = "y" ]]; then
     echo "Canceled."
     exit 1
 fi

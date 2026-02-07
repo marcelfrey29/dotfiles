@@ -28,8 +28,10 @@ else
 fi
 
 # Configuration Data
-read -p "IP Address of the Remote Machine: " remoteIp;
-read -p "Remote Username ($remoteIp): " remoteUser;
+echo -n "IP Address of the Remote Machine: "
+read remoteIp;
+echo -n "Remote Username ($remoteIp): "
+read remoteUser;
 
 # Copy
 echo "[INFO] Coping SSH Public Key to Remote $remoteIp..."

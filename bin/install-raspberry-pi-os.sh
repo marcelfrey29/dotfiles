@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ensure we run on macOS
-if [ $(uname) != "Darwin" ]
+if [ "$(uname)" != "Darwin" ]
 then
     echo "[ERROR] This script requires macOS ('Darwin')"
     exit 1;
@@ -21,7 +21,8 @@ echo "[INFO] Only type the name of the disk, e.g. 'disk2'"
 diskutil list;
 
 # Read disk name
-read -p "Disk to install RaspberryPiOS: " diskName;
+echo -n "Disk to install RaspberryPiOS: "
+read diskName;
 
 # Print relevant information to confirm
 echo "[INFO] You selected '$diskName'. "
@@ -31,9 +32,10 @@ diskutil info $diskName | grep "Disk Size"
 
 # Confirmation
 echo "[INFO] Writing to the wrong disk can damage your primary operating system!"
-read -p "Continue (y/n): " confirmation
+echo -n "Continue (y/n): "
+read confirmation
 
-if [ $confirmation == "y" ]
+if [ "$confirmation" = "y" ]
 then
     echo "[INFO] Installation confirmed..."
 
@@ -61,8 +63,11 @@ then
 
     # Create Userconfig with Username+Password (`username:encrypted_pw`) for headless access
     echo "[INFO] Configure User..."
-    read -p "Username for the Raspberry: " rpiUsername
-    read -s -p "Password for the Raspberry User '$rpiUsername': " rpiPassword
+    echo -n "Username for the Raspberry: "
+    read rpiUsername
+    echo -n "Password for the Raspberry User '$rpiUsername': "
+    read -s rpiPassword
+    echo
     echo "$rpiUsername:$(echo "$rpiPassword" | openssl passwd -6 -stdin)" >> userconf.txt
     echo "[INFO] Configured User."
 

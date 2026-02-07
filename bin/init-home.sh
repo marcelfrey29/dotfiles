@@ -21,4 +21,8 @@ mkdir -p Developer/Playground/marcelfrey29
 # Example Mount: ~/.docker_volumes/<project>/<container>/<[...]>:/path/in/container
 mkdir -p .docker_volumes
 
+# Create directories for command history and kube config (mount points)
+mkdir -p .cmd-history
+mkdir -p .kube
+
 echo "Home directory is ready."
