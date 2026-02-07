@@ -9,7 +9,17 @@
 	],
 	"customizations": {
 		"vscode": {
-			"extensions": []
+			"extensions": [
+				// Markdown
+				"bierner.github-markdown-preview",
+				// Docker (for devcontainer)
+				"ms-azuretools.vscode-docker",
+				// Syntax Highlighting
+				"redhat.vscode-xml",
+				"redhat.vscode-yaml",
+				// Other
+				"gruntfuggly.todo-tree"
+			]
 		}
 	}
 }

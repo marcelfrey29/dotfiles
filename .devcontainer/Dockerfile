@@ -1,5 +1,9 @@
 FROM debian:13.3
 
+# Set locale
+ENV LANG="C.UTF-8"
+ENV LC_ALL="C.UTF-8"
+
 # Install necessary packages
 RUN apt-get update && apt-get install -y \
     zsh \
