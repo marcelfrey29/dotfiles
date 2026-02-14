@@ -56,7 +56,9 @@ symbol = '🅽  '
 style = "bold 039" # Blue
 
 [kubernetes]
-disabled = false
+symbol = '☸  '
+detect_files = ['k8s']
+disabled = true
 
 [terraform]
 format = 'via [$symbol]($style) [$workspace]($style) ' # No Terraform Version because this takes too long
