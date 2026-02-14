@@ -163,12 +163,18 @@
     "search.showLineNumbers": true,
     // Generative AI: GitHub Copilot & Ollama+Continue
     "chat.commandCenter.enabled": false,
+    "chat.fontFamily": "default",
+    "chat.fontSize": 14,
+    "chat.editor.fontSize": 13,
     "chat.agentFilesLocations": {
         ".github/agents": true,
         ".copilot/agents": true,
         "~/.copilot/agents": true,
         ".claude/agents": true,
     },
+    "inlineChat.affordance": "gutter",
+    "inlineChat.enableV2": false,
+    "inlineChat.renderMode": "hover",
     "github.copilot.advanced": {
         "authPermissions": "minimal"
     },
@@ -199,6 +205,12 @@
     "scm.inputFontFamily": "editor",
     "scm.inputFontSize": 14,
     "scm.defaultViewMode": "tree",
+    "scm.diffDecorations": "all",
+    "scm.countBadge": "focused",
+    "scm.graph.badges": "all",
+    "scm.defaultViewSortKey": "path",
+    "scm.showActionButton": true,
+    "scm.showInputActionButton": false,
     "scm.diffDecorationsGutterPattern": {
         "added": false,
         "modified": false,
@@ -209,6 +221,11 @@
     "diffEditor.experimental.showMoves": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.renderGutterMenu": true,
+    "diffEditor.renderIndicators": true,
+    "diffEditor.wordWrap": "off",
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.experimental.useTrueInlineView": true,
     "git.replaceTagsWhenPull": true,
     // Editor
     "editor.tabSize": 4,
@@ -222,7 +239,7 @@
     "editor.wordWrap": "off",
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.hover.enabled": true,
+    "editor.hover.enabled": "on",
     "editor.hover.delay": 250,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
@@ -314,7 +331,7 @@
     "debug.inlineValues": "on",
     "debug.showInStatusBar": "always",
     "debug.console.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Consolas, 'Apple Color Emoji'",
-    "debug.console.fontSize": 13,
+    "debug.console.fontSize": 14,
     "debug.console.collapseIdenticalLines": true,
     "debug.showBreakpointsInOverviewRuler": true,
     "debug.toolBarLocation": "commandCenter",
@@ -481,12 +498,8 @@
         "gruntfuggly.todo-tree",
         "editorconfig.editorconfig",
         // Markdown
-        "bierner.markdown-checkbox",
-        "bierner.markdown-emoji",
-        "bierner.markdown-footnotes",
-        "bierner.markdown-yaml-preamble",
+        "bierner.github-markdown-preview",
         // Copilot
-        "github.copilot",
         "github.copilot-chat",
         // Syntax Highlighting
         "redhat.vscode-xml",
