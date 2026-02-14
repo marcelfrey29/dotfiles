@@ -28,6 +28,7 @@ declare homebrew_formulae_list=(
     "fzf"
     # Core Utils
     "wget"
+    "tree"
     # "nano"
     # Productivity
     # "pandoc"

@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     rsync \
     git \
     curl \
-    vim
+    vim \
+    tree
 
 # Use zsh as default shell
 RUN chsh -s /bin/zsh
