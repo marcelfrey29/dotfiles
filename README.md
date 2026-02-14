@@ -54,6 +54,12 @@ With this settings applied, VS Code will automatically clone the dotfiles reposi
 - [Use Host SSH Keys and Config inside a Devcontainer](docs/share-ssh-keys-and-config.md)
 - [OpenCode](docs/opencode.md)
 
+## Components
+
+### AI
+
+Custom Agents, Skills, and Tools for OpenCode and VS Code / GitHub Copilot ([Docs](ai/README.md)).
+
 ## Requirements
 
 - XCode Command Line Tools must be installed (`xcode-select --install`) 
