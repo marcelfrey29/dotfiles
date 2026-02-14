@@ -163,6 +163,12 @@
     "search.showLineNumbers": true,
     // Generative AI: GitHub Copilot & Ollama+Continue
     "chat.commandCenter.enabled": false,
+    "chat.agentFilesLocations": {
+        ".github/agents": true,
+        ".copilot/agents": true,
+        "~/.copilot/agents": true,
+        ".claude/agents": true,
+    },
     "github.copilot.advanced": {
         "authPermissions": "minimal"
     },

@@ -80,6 +80,22 @@ if [ "$FULL_OS" = true ]; then
     (cd ./ollama ; ./install.sh)
 fi
 
+# Open Code
+(cd ./opencode ; ./install.sh)
+
+# Copilot
+(cd ./vscode ; ./copilot.sh)
+
+# Private Dotfiles Extension
+if [ ! -d "../dotfiles-private" ]; then
+    (cd .. ; git clone https://github.com/marcelfrey29/dotfiles-private.git)
+else
+    (cd ../dotfiles-private ; git fetch && git pull)
+fi
+if [ -d "../dotfiles-private" ]; then
+    (cd ../dotfiles-private ; ./install.sh)
+fi
+
 # Reload terminal config
 if [ -n "$ZSH_VERSION" ]; then
     # Running in zsh

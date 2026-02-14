@@ -23,6 +23,9 @@ RUN mkdir -p ~/.cmd-history
 RUN apt-get install -y ssh
 RUN mkdir -p ~/.ssh
 
+# Install OpenCode
+RUN curl -fsSL https://opencode.ai/install | bash
+
 # Kubernetes (kubectl)
 ARG K8S_VERSION="1.35"
 RUN apt-get install -y apt-transport-https ca-certificates curl gnupg && \
