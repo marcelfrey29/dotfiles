@@ -7,6 +7,12 @@
 		// Command History Persistence & Sharing
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.cmd-history,target=/root/.cmd-history,type=bind"
 	],
+	"features": {
+		// Access Docker from the host machine
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+			"moby": false
+		}
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
