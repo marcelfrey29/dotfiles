@@ -13,8 +13,8 @@ if [ ! -f "$HOME/.opencode/credentials/auth.json" ]; then
     echo "{}" > ~/.opencode/credentials/auth.json
 fi
 mkdir -p ~/.local/share/opencode/
-if [ ! -f "$HOME/.local/share/opencode.auth.json" ]; then
-    echo "{}" > ~/.local/share/opencode.auth.json
+if [ ! -f "$HOME/.local/share/opencode/auth.json" ]; then
+    echo "{}" > ~/.local/share/opencode/auth.json
 fi
 
 # Config

@@ -15,7 +15,7 @@ To share credentials between containers (via the host), add the following mount:
 {
 	"mounts": [
 		// OpenCode Credentials
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.opencode/credentials/auth.json,target=/.local/share/opencode/auth.json,type=bind",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.opencode/credentials/auth.json,target=/root/.local/share/opencode/auth.json,type=bind"
 	],
 }
 ```
@@ -34,7 +34,7 @@ opencode web
 ## Additional Configuration without Dotfiles Repository
 
 As long as the Dev Container uses this `dotfiles` repository no additional Docker mounts are required. 
-When this `dotiles` repository is **not** used, the configuration, agents, and skills are not copied to the home directory.
+When this `dotfiles` repository is **not** used, the configuration, agents, and skills are not copied to the home directory.
 In case they should still be used, the Devcontainer needs the following additional mount (we assume they are available on the host machine):
 
 ```jsonc
