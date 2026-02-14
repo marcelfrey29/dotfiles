@@ -52,6 +52,7 @@ With this settings applied, VS Code will automatically clone the dotfiles reposi
 - [Acces Docker on Host from inside a Devcontainer](docs/docker-on-host-access.md)
 - [Acces a remote Kubernetes Cluster](docs/remote-k8s-access.md)
 - [Use Host SSH Keys and Config inside a Devcontainer](docs/share-ssh-keys-and-config.md)
+- [OpenCode](docs/opencode.md)
 
 ## Requirements
 

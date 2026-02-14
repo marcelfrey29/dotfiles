@@ -80,6 +80,9 @@ if [ "$FULL_OS" = true ]; then
     (cd ./ollama ; ./install.sh)
 fi
 
+# Open Code
+(cd ./opencode ; ./install.sh)
+
 # Reload terminal config
 if [ -n "$ZSH_VERSION" ]; then
     # Running in zsh
