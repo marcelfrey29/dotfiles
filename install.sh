@@ -83,6 +83,9 @@ fi
 # Open Code
 (cd ./opencode ; ./install.sh)
 
+# Copilot
+(cd ./vscode ; ./copilot.sh)
+
 # Private Dotfiles Extension
 if [ ! -d "../dotfiles-private" ]; then
     (cd .. ; git clone https://github.com/marcelfrey29/dotfiles-private.git)
