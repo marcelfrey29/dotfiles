@@ -6,6 +6,8 @@
 	"mounts": [
 		// Command History Persistence & Sharing
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.cmd-history,target=/root/.cmd-history,type=bind",
+		// SSH Config & Keys from host machine
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind",
 		// Use Kubernetes Config from host machine
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind"
 	],

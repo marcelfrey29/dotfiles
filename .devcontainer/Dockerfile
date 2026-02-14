@@ -18,6 +18,10 @@ RUN chsh -s /bin/zsh
 # Create necessary directories (mount points)
 RUN mkdir -p ~/.cmd-history
 
+# Use Host SSH Config & Keys
+RUN apt-get install -y ssh
+RUN mkdir -p ~/.ssh
+
 # Kubernetes (kubectl)
 ARG K8S_VERSION="1.35"
 RUN apt-get install -y apt-transport-https ca-certificates curl gnupg && \
