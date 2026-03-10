@@ -145,36 +145,36 @@
     "explorer.openEditors.visible": 1,
     "explorer.confirmPasteNative": false,
     // Outline
-    "outline.showVariables": false,
-    "outline.showProperties": true,
-    "[typescript]": {
-        "outline.showVariables": false,
-        "outline.showProperties": true
-    },
-    "[terraform]": {
-        "outline.showArrays": false,
-        "outline.showBooleans": false,
-        "outline.showNumbers": false,
-        "outline.showStrings": false,
-        "outline.showVariables": false,
-        "outline.showConstants": false
-    },
+    "outline.icons": true,
+    "outline.problems.enabled": true,
+    "outline.problems.badges": true,
+    "outline.problems.colors": true,
+    "outline.collapseItems": "alwaysExpand",
+    "[typescript]": {},
+    "[terraform]": {},
     // Search
     "search.showLineNumbers": true,
-    // Generative AI: GitHub Copilot & Ollama+Continue
+    // Chat, AI & Agents
     "chat.commandCenter.enabled": false,
     "chat.fontFamily": "default",
     "chat.fontSize": 14,
-    "chat.editor.fontSize": 13,
+    "chat.editor.fontSize": 14,
     "chat.agentFilesLocations": {
         ".github/agents": true,
         ".copilot/agents": true,
         "~/.copilot/agents": true,
         ".claude/agents": true,
     },
+    // Inline Chat
     "inlineChat.affordance": "gutter",
-    "inlineChat.enableV2": false,
+    "inlineChat.enableV2": true,
     "inlineChat.renderMode": "hover",
+    // Inline AI Completions
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.fontFamily": "default",
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    // Github Copilot
     "github.copilot.advanced": {
         "authPermissions": "minimal"
     },
@@ -196,6 +196,7 @@
     "files.autoSaveDelay": 5000,
     // Breadcrumbs
     "breadcrumbs.enabled": false,
+    "breadcrumbs.symbolPath": "off",
     "breadcrumbs.filePath": "on",
     "breadcrumbs.icons": true,
     "breadcrumbs.symbolSortOrder": "position",
@@ -278,7 +279,7 @@
         "strings": false
     },
     "editor.snippetSuggestions": "bottom",
-    "editor.quickSuggestionsDelay": 100,
+    "editor.quickSuggestionsDelay": 0,
     "editor.multiDocumentOccurrencesHighlight": true,
     "editor.tokenColorCustomizations": {
         "[GitHub Dark Dimmed]": {
@@ -327,6 +328,7 @@
     "problems.defaultViewMode": "table",
     "problems.showCurrentInStatus": true,
     "problems.decorations.enabled": true,
+    "problems.sortOrder": "severity",
     // Debugger
     "debug.inlineValues": "on",
     "debug.showInStatusBar": "always",
@@ -341,7 +343,7 @@
     "terminal.integrated.fontFamily": "'JetBrains Mono', 'FiraCode-Retina', Monaco, Consolas, 'Apple Color Emoji'",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.scrollback": 100000,
     "terminal.integrated.suggest.enabled": false,
@@ -374,6 +376,7 @@
     "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
     "javascript.inlayHints.variableTypes.enabled": true,
     "javascript.inlayHints.variableTypes.suppressWhenTypeMatchesName": false,
+    "typescript.suggest.completeFunctionCalls": true,
     // Language - TypeScript
     "typescript.implementationsCodeLens.enabled": true,
     "typescript.experimental.expandableHover": true,
