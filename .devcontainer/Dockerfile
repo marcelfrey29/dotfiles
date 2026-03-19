@@ -1,4 +1,4 @@
-FROM debian:13.3
+FROM debian:13.4
 
 # Set locale
 ENV LANG="C.UTF-8"
