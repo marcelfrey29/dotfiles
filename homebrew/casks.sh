@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
 
-echo "Installing Homebrew Casks..."
+# Parse command line arguments
+FULL_OS=false
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --full-os)
+            FULL_OS=true
+            shift
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Usage: $0 [--full-os]"
+            exit 1
+            ;;
+    esac
+done
+
+echo "Installing Homebrew Casks with FULL_OS=$FULL_OS..."
 
 # Install packages via homebrew
 # $1: array<string> the list of casks to install
@@ -19,15 +35,36 @@ function brew_cask_install() {
     done
 }
 
-# Cask List
+# Cask List (Minimal, e.g. for VMs)
 declare homebrew_cask_list=(
+    # Browsers
+    "firefox"
+    "firefox@developer-edition"
+    "google-chrome"
+    "google-chrome@dev"
+    "safari-technology-preview"
+    # Developer Tools
+    "visual-studio-code"
+    "docker"
+    "burp-suite"
+    "ollama"
+    # Fonts
+    "font-jetbrains-mono"
+    "font-fira-code"
+)
+
+brew_cask_install "${homebrew_cask_list[@]}"
+
+# Cask List (Full OS)
+declare homebrew_cask_list_full_os=(
     # Productivity
     # "standard-notes"
     "obsidian"
     "firefox"
     "firefox@developer-edition"
     "google-chrome"
-    # "homebrew/cask-versions/google-chrome-dev"
+    "google-chrome@dev"
+    "safari-technology-preview"
     "microsoft-word"
     "microsoft-excel"
     "microsoft-powerpoint"
@@ -39,7 +76,7 @@ declare homebrew_cask_list=(
     # "jetbrains-toolbox"
     # "teamviewer"
     # "virtualbox" # Incompatible with Apple Silicon
-    # "utm"
+    "utm"
     # "vagrant"
     "container"
     "docker"
@@ -64,6 +101,9 @@ declare homebrew_cask_list=(
     "font-fira-code"
 )
 
-brew_cask_install "${homebrew_cask_list[@]}"
+if [ "$FULL_OS" = true ]; then
+    echo "Installing all Applications..."
+    brew_cask_install "${homebrew_cask_list_full_os[@]}"
+fi
 
 echo "Installed Casks."
