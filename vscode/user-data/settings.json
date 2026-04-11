@@ -168,7 +168,7 @@
     // Inline Chat
     "inlineChat.affordance": "gutter",
     "inlineChat.enableV2": true,
-    "inlineChat.renderMode": "hover",
+    "inlineChat.renderMode": "zone",
     // Inline AI Completions
     "editor.inlineSuggest.enabled": false,
     "editor.inlineSuggest.fontFamily": "default",
