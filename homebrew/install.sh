@@ -19,6 +19,9 @@ done
 # Install Homebrew if it is not installed
 if ! command -v brew &> /dev/null; then
     echo "Homebrew is not installed. Installing..."
+        # Homebrew can't be run as root, but requires a sudo session. So we echo with sudo before running the
+        # non-interactive install, see https://github.com/orgs/Homebrew/discussions/4311 for details.
+        sudo echo "I am a sudo session now and can install Homebrew in non-interactive mode. 🍻"
         NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         eval "$(/opt/homebrew/bin/brew shellenv zsh)"
     echo "Installed Homebrew."
