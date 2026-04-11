@@ -36,13 +36,15 @@ case "$OS" in
         echo "Detected macOS, running macOS installation scripts..."
         
         # macOS System Config
+        (cd ./macOS ; ./install.sh)
+        
+        # Homebrew
         if [ "$FULL_OS" = true ]; then
             echo "Running full OS setup for macOS..."
-            (cd ./macOS ; ./install.sh)
+            (cd ./homebrew ; ./install.sh --full-os)
+        else 
+            (cd ./homebrew ; ./install.sh)
         fi
-
-        # Homebrew
-        (cd ./homebrew ; ./install.sh)
         ;;
     Linux)
         echo "Detected Linux, running Linux installation scripts..."
