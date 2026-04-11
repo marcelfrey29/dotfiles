@@ -3,7 +3,8 @@
 # Install Homebrew if it is not installed
 if ! command -v brew &> /dev/null; then
     echo "Homebrew is not installed. Installing..."
-     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        eval "$(/opt/homebrew/bin/brew shellenv zsh)"
     echo "Installed Homebrew."
 fi
 
