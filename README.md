@@ -1,6 +1,7 @@
 # Dotfiles
 
 [![Dependabot Updates](https://github.com/marcelfrey29/dotfiles/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/marcelfrey29/dotfiles/actions/workflows/dependabot/dependabot-updates)
+[![SAST](https://github.com/marcelfrey29/dotfiles/actions/workflows/SAST.yml/badge.svg)](https://github.com/marcelfrey29/dotfiles/actions/workflows/SAST.yml)
 
 > [!CAUTION]
 > Installing the dotfiles will **override** some system configurations and certain files in your file system, for example in your home directory or your VS Code configuration.\
