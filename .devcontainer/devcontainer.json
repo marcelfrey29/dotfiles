@@ -11,8 +11,6 @@
         // Use Kubernetes Config from host machine
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind"
     ],
-    // Use Host Network to Access Ollama on Host Machine
-    "runArgs": ["--net=host"],
     "features": {
         // Access Docker from the host machine
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {

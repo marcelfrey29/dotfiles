@@ -76,9 +76,6 @@ if [ "$FULL_OS" = true ]; then
     # VS Code & Zed
     (cd ./vscode ; ./install.sh)
     (cd ./zed ; ./install.sh)
-
-    # Ollama
-    (cd ./ollama ; ./install.sh)
 fi
 
 # Copilot

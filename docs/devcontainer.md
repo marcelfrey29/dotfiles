@@ -44,6 +44,17 @@ RUN mkdir -p ~/.cmd-history
 }
 ```
 
+## Access to Ollama
+
+```jsonc
+{
+  // Use Host Network to Access Ollama on Host Machine
+	"runArgs": [
+		"--net=host"
+	],
+}
+```
+
 ## Default VS Code Extensions
 
 ```jsonc

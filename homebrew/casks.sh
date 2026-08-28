@@ -49,7 +49,7 @@ declare homebrew_cask_list=(
     "podman"
     # "docker"
     # "burp-suite"
-    "ollama"
+    # "ollama"
     # Fonts
     "font-jetbrains-mono"
     "font-fira-code"
@@ -91,7 +91,7 @@ declare homebrew_cask_list_full_os=(
     "keepassxc"
     # "burp-suite"
     # AI
-    "ollama"
+    # "ollama"
     # Entertainment
     "vlc"
     # "spotify"
