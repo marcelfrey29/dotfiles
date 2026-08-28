@@ -10,8 +10,10 @@
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind",
 		// Use Kubernetes Config from host machine
 		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind",
-		// OpenCode Credentials
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.opencode/credentials/auth.json,target=/root/.local/share/opencode/auth.json,type=bind"
+	],
+	// Use Host Network to Access Ollama on Host Machine
+	"runArgs": [
+		"--net=host"
 	],
 	"features": {
 		// Access Docker from the host machine

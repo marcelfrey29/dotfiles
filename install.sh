@@ -3,8 +3,6 @@
 # This is the central installation script for the dotfiles.
 # By default, this script will only setup the core dotfiles configuration, but not the full main OS environment.
 # To setup the full main OS environment, run this script with the `--full-os` flag.
-#
-# 
 
 # Parse command line arguments
 FULL_OS=false
@@ -34,27 +32,27 @@ OS="$(uname -s)"
 case "$OS" in
     Darwin)
         echo "Detected macOS, running macOS installation scripts..."
-        
+
         # macOS System Config
         (cd ./macOS ; ./install.sh)
-        
+
         # Homebrew
         if [ "$FULL_OS" = true ]; then
             echo "Running full OS setup for macOS..."
             (cd ./homebrew ; ./install.sh --full-os)
-        else 
+        else
             (cd ./homebrew ; ./install.sh)
         fi
         ;;
     Linux)
         echo "Detected Linux, running Linux installation scripts..."
-        
+
         # Linux System Config
         if [ "$FULL_OS" = true ]; then
             echo "Running full OS setup..."
             # No additional full OS setup for Linux yet
         fi
-        
+
         # Linux Packages
         (cd ./linux ; ./install.sh)
         ;;
@@ -81,9 +79,6 @@ if [ "$FULL_OS" = true ]; then
     # Ollama
     (cd ./ollama ; ./install.sh)
 fi
-
-# Open Code
-(cd ./opencode ; ./install.sh)
 
 # Copilot
 (cd ./vscode ; ./copilot.sh)
