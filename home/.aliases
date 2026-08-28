@@ -23,5 +23,7 @@ alias tfw="terraform workspace"
 # Ansible
 alias ap="ansible-playbook"
 
-# Kubernetes
+# Container, Docker & Kubernetes
+alias docker="podman"
+alias container="podman"
 alias k="kubectl"
