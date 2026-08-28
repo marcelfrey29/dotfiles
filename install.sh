@@ -73,8 +73,9 @@ rsync -vrh --exclude ".DS_Store" --exclude "*.img*" ./bin/ ~/.bin/marcelfrey29/
 # Optional: Full OS setup (e.g. application configuration)
 if [ "$FULL_OS" = true ]; then
     echo "Running full OS setup..."
-    # VS Code
+    # VS Code & Zed
     (cd ./vscode ; ./install.sh)
+    (cd ./zed ; ./install.sh)
 
     # Ollama
     (cd ./ollama ; ./install.sh)

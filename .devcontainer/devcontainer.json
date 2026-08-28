@@ -1,39 +1,40 @@
 {
-	"name": "Dotfiles",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-	"mounts": [
-		// Command History Persistence & Sharing
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.cmd-history,target=/root/.cmd-history,type=bind",
-		// SSH Config & Keys from host machine
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind",
-		// Use Kubernetes Config from host machine
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind",
-	],
-	// Use Host Network to Access Ollama on Host Machine
-	"runArgs": [
-		"--net=host"
-	],
-	"features": {
-		// Access Docker from the host machine
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-			"moby": false
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				// Markdown
-				"bierner.github-markdown-preview",
-				// Docker (for devcontainer)
-				"ms-azuretools.vscode-docker",
-				// Syntax Highlighting
-				"redhat.vscode-xml",
-				"redhat.vscode-yaml",
-				// Other
-				"gruntfuggly.todo-tree"
-			]
-		}
-	}
+    "name": "Dotfiles",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "mounts": [
+        // Command History Persistence & Sharing
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.cmd-history,target=/root/.cmd-history,type=bind",
+        // SSH Config & Keys from host machine
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind",
+        // Use Kubernetes Config from host machine
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind"
+    ],
+    // Use Host Network to Access Ollama on Host Machine
+    "runArgs": ["--net=host"],
+    "features": {
+        // Access Docker from the host machine
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "moby": false
+        }
+    },
+    "customizations": {
+        "zed": {
+            "extensions": []
+        },
+        "vscode": {
+            "extensions": [
+                // Markdown
+                "bierner.github-markdown-preview",
+                // Docker (for devcontainer)
+                "ms-azuretools.vscode-docker",
+                // Syntax Highlighting
+                "redhat.vscode-xml",
+                "redhat.vscode-yaml",
+                // Other
+                "gruntfuggly.todo-tree"
+            ]
+        }
+    }
 }

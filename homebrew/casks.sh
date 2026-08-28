@@ -44,6 +44,7 @@ declare homebrew_cask_list=(
     "google-chrome@dev"
     "safari-technology-preview"
     # Developer Tools
+    "zed"
     "visual-studio-code"
     "docker"
     "burp-suite"

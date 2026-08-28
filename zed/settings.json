@@ -1,0 +1,140 @@
+// Zed Settings
+//
+// Documentation: https://zed.dev/docs/configuring-zed
+{
+    // Telemetry
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+        "anthropic_retention": false
+    },
+    // General
+    "use_podman": true,
+    // AI Master Settings
+    "disable_ai": true,
+    // UI
+    "title_bar": {
+        "show_menus": true,
+        "show_sign_in": false
+    },
+    "toolbar": {},
+    "status_bar": {},
+    "scrollbar": {
+        "show": "always"
+    },
+    "tab_bar": {},
+    "tabs": {
+        "show_close_button": "always",
+        "file_icons": true,
+        "git_status": true,
+        "show_diagnostics": "all"
+    },
+    "preview_tabs": {
+        "enabled": false
+    },
+    "gutter": {},
+    // Font
+    "buffer_font_size": 15.0,
+    "buffer_font_weight": 400.0,
+    "buffer_line_height": "comfortable",
+    "buffer_font_family": "Fira Code",
+    "buffer_font_features": {},
+    "ui_font_size": 16.0,
+    "ui_font_weight": 400.0,
+    "ui_font_family": ".ZedSans",
+    "ui_font_features": {},
+    "markdown_preview_font_size": 16.0,
+    "markdown_preview": {
+        "max_width": 1000
+    },
+    "agent_buffer_font_size": 15,
+    "agent_ui_font_size": 15.0,
+    "agent_buffer_font_family": "Fira Code",
+    // Panels
+    "project_panel": {
+        "dock": "left",
+        "default_width": 300.0,
+        "hide_root": true,
+        "bold_folder_labels": true,
+        "entry_spacing": "standard",
+        "git_status_indicator": true,
+        "diagnostic_badges": true
+    },
+    "git_panel": {
+        "dock": "left",
+        "default_width": 300.0,
+        "show_count_badge": true,
+        "file_icons": true,
+        "tree_view": true,
+        "status_style": "icon",
+        "group_by": "none"
+    },
+    "outline_panel": {
+        "dock": "right",
+        "default_width": 300
+    },
+    "collaboration_panel": {
+        "dock": "right"
+    },
+    "agent": {
+        "dock": "right",
+        "sidebar_side": "right",
+        "default_width": 500,
+        "play_sound_when_agent_done": "always"
+    },
+    "terminal": {
+        "dock": "bottom",
+        "show_count_badge": true
+    },
+    "debugger": {
+        "dock": "bottom"
+    },
+    // Git
+    "git": {
+        "enable_status": true,
+        "inline_blame": {
+            "location": "status_bar",
+            "show_commit_summary": true
+        }
+    },
+    "diff_view_style": "split",
+    // Editor
+    "format_on_save": "on",
+    "vim_mode": true,
+    "base_keymap": "Zed",
+    "hide_mouse": "never",
+    "cursor_blink": true,
+    "rounded_selection": true,
+    "completion_menu_item_kind": "symbol",
+    "completion_menu_scrollbar": "always",
+    "completions": {
+        "words_min_length": 1
+    },
+    "code_lens": "on",
+    "diagnostics": {
+        "button": true,
+        "inline": {
+            "min_column": 0,
+            "padding": 4,
+            "enabled": true
+        }
+    },
+    "inlay_hints": {
+        "enabled": true,
+        "show_background": false
+    },
+    // Theme
+    "theme": {
+        "mode": "system",
+        "light": "Ayu Light Custom",
+        "dark": "Ayu Dark Custom"
+    },
+    // Extension
+    "auto_install_extensions": {
+        "dockerfile": true,
+        "terraform": true,
+        "html": true,
+        "astro": true,
+        "biome": true
+    }
+}
