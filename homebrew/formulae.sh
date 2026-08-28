@@ -2,8 +2,6 @@
 
 echo "Installing Homebrew Formulas..."
 
-brew tap oven-sh/bun
-
 # Install packages via homebrew
 # $1: array<string> the list of fomulas to install
 function brew_formulas_install() {
