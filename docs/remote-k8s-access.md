@@ -24,9 +24,9 @@ To use the Kubeconfig from the host machine (which is ideal for sharing it acros
 ```jsonc
 {
     "mounts": [
-		// Use Kubernetes Config from host machine
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind"
-	]
+        // Use Kubernetes Config from host machine
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.kube/config,target=/root/.kube/config,type=bind",
+    ],
 }
 ```
 
@@ -34,14 +34,14 @@ Recommended: Install the Docker & K8s VS Code extensions:
 
 ```jsonc
 {
-	"customizations": {
-		"vscode": {
-			"extensions": [
-			    // Docker & Kubernetes
-				"ms-azuretools.vscode-docker",
-				"ms-kubernetes-tools.vscode-kubernetes-tools",
-			]
-		}
-	}
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Docker & Kubernetes
+                "ms-azuretools.vscode-docker",
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
+            ],
+        },
+    },
 }
 ```

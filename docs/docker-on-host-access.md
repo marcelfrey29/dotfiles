@@ -10,19 +10,19 @@ Access Docker on the host to run and manage containers from inside a Dev Contain
 
 ```jsonc
 {
-	"features": {
-		// Access Docker from the host machine
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
-			"moby": false
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				// Docker (for devcontainer)
-				"ms-azuretools.vscode-docker"
-			]
-		}
-	}
+    "features": {
+        // Access Docker from the host machine
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "moby": false,
+        },
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Docker (for devcontainer)
+                "ms-azuretools.vscode-docker",
+            ],
+        },
+    },
 }
 ```

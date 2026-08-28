@@ -1,5 +1,7 @@
 # Dotfiles
 
+[![Dependabot Updates](https://github.com/marcelfrey29/dotfiles/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/marcelfrey29/dotfiles/actions/workflows/dependabot/dependabot-updates)
+
 > [!CAUTION]
 > Installing the dotfiles will **override** some system configurations and certain files in your file system, for example in your home directory or your VS Code configuration.\
 > **As with every script, make sure you understand the impact before executing it.**
@@ -7,7 +9,7 @@
 > [!IMPORTANT]
 > Currently all scripts only make sure that the packages that are defined in the list are installed.
 > The package list **does not represent the target state** which means that installed packages that are no longer of the list are **not** removed.\
-> If you want to remove a package that was removed from the list, uninstall it manually.  
+> If you want to remove a package that was removed from the list, uninstall it manually.
 
 ## Tenets
 
@@ -23,12 +25,21 @@
 
 ## Installation
 
-To install the dotfiles, simply run the install script.
+To install the dotfiles, simply clone the repository and run the install script.
+
+> [!IMPORTANT]
+> To use `git` on macOS, the XCode Command Line Tools are required: Run `xcode-select --install` and install them.
 
 > [!NOTE]
 > To install the dotfiles on your main OS, you must run the `./install.sh [--full-os]` script from outside the Dev Container.
 
 ```bash
+# Clone the Repository
+git clone https://github.com/marcelfrey29/dotfiles.git
+
+# Change to dofiles directory
+cd dotfiles
+
 # Terminal Config & Base Packages
 ./install.sh
 
@@ -36,14 +47,14 @@ To install the dotfiles, simply run the install script.
 ./install.sh --full-os
 ```
 
-VS Code Dev Containers support Dotfiles out of the box. 
+VS Code Dev Containers support Dotfiles out of the box.
 Simply add the following configuration to your VS Code Settings.
 With this settings applied, VS Code will automatically clone the dotfiles repository into the Dev Container and run the install script.
 
 ```json
 {
     "dotfiles.repository": "https://github.com/marcelfrey29/dotfiles",
-    "dotfiles.targetPath": "~/.dotfiles",
+    "dotfiles.targetPath": "~/.dotfiles"
 }
 ```
 
@@ -61,20 +72,10 @@ With this settings applied, VS Code will automatically clone the dotfiles reposi
 
 Custom Agents, Skills, and Tools for OpenCode and VS Code / GitHub Copilot ([Docs](ai/README.md)).
 
-## Requirements
-
-- XCode Command Line Tools must be installed (`xcode-select --install`) 
-- Git must be configured
-
-## Post-Setup
-
-- Docker
-    - Configure file sharing: Allow Docker to mount the `~/.docker_volumes` directory
-
 ## Credits
 
 I got inspiration from following repositories:
 
-- https://github.com/holman/dotfiles 
-- https://github.com/mathiasbynens/dotfiles 
+- https://github.com/holman/dotfiles
+- https://github.com/mathiasbynens/dotfiles
 - https://github.com/paulirish/dotfiles

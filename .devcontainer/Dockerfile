@@ -1,23 +1,26 @@
 FROM debian:13.3
 
-# Set locale
+# Set Locale
 ENV LANG="C.UTF-8"
 ENV LC_ALL="C.UTF-8"
 
-# Install necessary packages
+# Install Core Packages and use "zsh" as default shells
 RUN apt-get update && apt-get install -y \
     zsh \
     rsync \
     git \
     curl \
     vim \
-    tree
-
-# Use zsh as default shell
+    tree \
+    htop \
+    dnsutils
 RUN chsh -s /bin/zsh
 
-# Create necessary directories (mount points)
+# Shared Command History (mount point)
 RUN mkdir -p ~/.cmd-history
+
+# Setup Dotfiles in Container
+RUN cd ~ && git clone https://github.com/marcelfrey29/dotfiles.git && cd dotfiles && ./install.sh
 
 # Use Host SSH Config & Keys
 RUN apt-get install -y ssh
